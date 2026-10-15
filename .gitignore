@@ -1,0 +1,18 @@
+# Lazarus / Free Pascal compiled units & intermediates
+lazarus/lib/
+*.o
+*.ppu
+*.or
+*.rsj
+*.compiled
+*.bak
+*.~*
+backup/
+
+# Temporary runtime & self-check reports
+self_check_report.txt
+*.log
+*.tmp
+
+# Local release archives (uploaded via GitHub Releases / CI)
+release/*.zip

@@ -1,0 +1,77 @@
+object FormPathVariables: TFormPathVariables
+  Left = 0
+  Height = 858
+  Top = 0
+  Width = 930
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Path Variables...'
+  ClientHeight = 858
+  ClientWidth = 930
+  Color = clBtnFace
+  DesignTimePPI = 120
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'Tahoma'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '3.6.0.0'
+  object MemoPathVariables: TMemo
+    Left = 0
+    Height = 858
+    Top = 0
+    Width = 930
+    Align = alClient
+    Color = clBlack
+    Font.Color = clWhite
+    Font.Height = -20
+    Font.Name = 'Consolas'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object PanelMenu: TPanel
+    Left = 838
+    Height = 25
+    Top = 5
+    Width = 66
+    BevelOuter = bvNone
+    ClientHeight = 25
+    ClientWidth = 66
+    Color = clCaptionText
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    object LabelMenu: TLabel
+      Cursor = crHandPoint
+      Left = 0
+      Height = 24
+      Top = -2
+      Width = 55
+      Caption = 'Action'
+      Color = clMenuHighlight
+      Font.Color = clLime
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      ParentColor = False
+      ParentFont = False
+      OnClick = LabelMenuClick
+      OnMouseEnter = LabelMenuMouseEnter
+      OnMouseLeave = LabelMenuMouseLeave
+    end
+  end
+  object PopupMenuPATHVariable: TPopupMenu
+    Left = 360
+    Top = 270
+    object MnuAddToUserPath: TMenuItem
+      Caption = 'Add Nexagon to PATH (User)'
+      OnClick = MnuAddToUserPathClick
+    end
+    object MnuRemoveFromUserPath: TMenuItem
+      Caption = 'Remove Nexagon from PATH'
+      OnClick = MnuRemoveFromUserPathClick
+    end
+  end
+end

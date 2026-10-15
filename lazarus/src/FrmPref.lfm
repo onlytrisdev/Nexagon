@@ -1,0 +1,945 @@
+object FormPref: TFormPref
+  Left = 842
+  Height = 804
+  Top = 224
+  Width = 1276
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Preferences'
+  ClientHeight = 804
+  ClientWidth = 1276
+  Color = clBtnFace
+  DesignTimePPI = 120
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'Tahoma'
+  Position = poOwnerFormCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  object TabControl: TTabControl
+    Left = -8
+    Height = 784
+    Top = 48
+    Width = 1237
+    OnChange = TabControlChange
+    OwnerDraw = True
+    TabIndex = 0
+    Tabs.Strings = (
+      'General'
+      'Services && Ports '
+    )
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    ParentFont = False
+    TabOrder = 0
+    object PanelMailSender: TPanel
+      Left = 656
+      Height = 431
+      Top = 320
+      Width = 600
+      BevelOuter = bvNone
+      ClientHeight = 431
+      ClientWidth = 600
+      ParentBackground = False
+      TabOrder = 0
+      object LabelGmailAddress: TLabel
+        Left = 2
+        Height = 19
+        Top = 14
+        Width = 109
+        Caption = 'Gmail Address:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object LabelGmailPassword: TLabel
+        Left = 2
+        Height = 19
+        Top = 79
+        Width = 119
+        Caption = 'Gmail Password:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object LabelMailAdvanced: TLabel
+        Left = 8
+        Height = 17
+        Top = 415
+        Width = 112
+        Caption = 'Advanced settings'
+        Font.Color = clBlue
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsUnderline]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        Visible = False
+        OnClick = LabelMailAdvancedClick
+      end
+      object LabelMailSenderNote: TLabel
+        Left = 2
+        Height = 18
+        Top = 272
+        Width = 20
+        Caption = '....'
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        ParentFont = False
+      end
+      object BtnTestMail: TButton
+        Left = 0
+        Height = 39
+        Top = 168
+        Width = 225
+        Caption = 'Test Sending Mail...'
+        TabOrder = 0
+        OnClick = BtnTestMailClick
+      end
+      object EditEmail: TEdit
+        Left = 2
+        Height = 27
+        Top = 41
+        Width = 475
+        TabOrder = 1
+        Text = 'leokhoa@gmail.com'
+        OnChange = EditEmailChange
+      end
+      object EditPassword: TEdit
+        Left = 2
+        Height = 27
+        Top = 106
+        Width = 475
+        TabOrder = 2
+        Text = '*******'
+        OnChange = EditPasswordChange
+      end
+      object CheckBoxMailSenderEnabled: TCheckBox
+        Left = 2
+        Height = 23
+        Top = 245
+        Width = 77
+        Caption = 'Enabled'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+        OnClick = CheckBoxMailSenderEnabledClick
+      end
+    end
+    object PanelMailAdvanced: TPanel
+      Left = 800
+      Height = 404
+      Top = 504
+      Width = 501
+      BevelOuter = bvNone
+      ClientHeight = 404
+      ClientWidth = 501
+      ParentBackground = False
+      TabOrder = 1
+      Visible = False
+      object Label10: TLabel
+        Left = 2
+        Height = 19
+        Top = 14
+        Width = 54
+        Caption = 'Email*:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label11: TLabel
+        Left = 2
+        Height = 19
+        Top = 79
+        Width = 82
+        Caption = 'Password*:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label14: TLabel
+        Left = 0
+        Height = 19
+        Top = 212
+        Width = 73
+        Caption = 'Mail from:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label13: TLabel
+        Left = 0
+        Height = 19
+        Top = 142
+        Width = 38
+        Caption = 'Host:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label16: TLabel
+        Left = 235
+        Height = 19
+        Top = 141
+        Width = 35
+        Caption = 'Port:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label17: TLabel
+        Left = 306
+        Height = 19
+        Top = 142
+        Width = 94
+        Caption = 'Authenticate:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object LabelBasicSettings: TLabel
+        Left = 364
+        Height = 17
+        Top = 299
+        Width = 81
+        Caption = 'Basic settings'
+        Font.Color = clBlue
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsUnderline]
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = LabelBasicSettingsClick
+      end
+      object Label7: TLabel
+        Left = 235
+        Height = 19
+        Top = 212
+        Width = 65
+        Caption = 'Reply-to:'
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Label8: TLabel
+        Left = 351
+        Height = 17
+        Top = 334
+        Width = 100
+        Caption = 'Change Service:'
+        Font.Color = clWindowText
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        Visible = False
+        OnClick = LabelDocumentRootClick
+      end
+      object Button1: TButton
+        Left = 0
+        Height = 31
+        Top = 292
+        Width = 119
+        Caption = 'Test Mail...'
+        TabOrder = 0
+        OnClick = BtnTestMailClick
+      end
+      object Edit3: TEdit
+        Left = 2
+        Height = 27
+        Top = 41
+        Width = 444
+        ReadOnly = True
+        TabOrder = 1
+        Text = 'leokhoa@gmail.com'
+      end
+      object Edit4: TEdit
+        Left = 2
+        Height = 27
+        Top = 106
+        Width = 444
+        ReadOnly = True
+        TabOrder = 2
+        Text = '*******'
+      end
+      object Edit5: TEdit
+        Left = 0
+        Height = 27
+        Top = 239
+        Width = 212
+        TabOrder = 3
+        Text = 'leokhoa@gmail.com'
+      end
+      object Edit7: TEdit
+        Left = 0
+        Height = 27
+        Top = 170
+        Width = 212
+        ReadOnly = True
+        TabOrder = 4
+        Text = 'smtp.gmail.com'
+      end
+      object ComboBox2: TComboBox
+        Left = 306
+        Height = 27
+        Top = 170
+        Width = 96
+        ItemHeight = 19
+        ItemIndex = 0
+        Items.Strings = (
+          'TSL'
+          'SSL'
+          'None'
+        )
+        Style = csDropDownList
+        TabOrder = 5
+        Text = 'TSL'
+      end
+      object Edit8: TEdit
+        Left = 235
+        Height = 27
+        Top = 170
+        Width = 45
+        Alignment = taRightJustify
+        ReadOnly = True
+        TabOrder = 6
+        Text = '587'
+      end
+      object Edit1: TEdit
+        Left = 235
+        Height = 27
+        Top = 240
+        Width = 212
+        TabOrder = 7
+        Text = 'leokhoa@gmail.com'
+      end
+      object ComboBox3: TComboBox
+        Left = 351
+        Height = 25
+        Top = 356
+        Width = 96
+        Font.Color = clWindowText
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        ItemHeight = 17
+        ItemIndex = 0
+        Items.Strings = (
+          'Gmail'
+          ''
+        )
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 8
+        Text = 'Gmail'
+        Visible = False
+      end
+      object CheckBox1: TCheckBox
+        Left = 366
+        Height = 23
+        Top = 15
+        Width = 77
+        Caption = 'Enabled'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 9
+        OnClick = CheckBoxMailSenderEnabledClick
+      end
+    end
+    object PanelMailCatcher: TPanel
+      Left = 776
+      Height = 431
+      Top = 16
+      Width = 600
+      BevelOuter = bvNone
+      ClientHeight = 431
+      ClientWidth = 600
+      ParentBackground = False
+      TabOrder = 2
+      OnClick = PanelMailCatcherClick
+      object LabelMailCatcherNote: TLabel
+        Left = 2
+        Height = 18
+        Top = 44
+        Width = 453
+        Caption = 'When calling mail() function, Nexagon will catch generated email info...'
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        ParentFont = False
+        OnClick = LabelDocumentRootClick
+      end
+      object LabelMailCatcherYouCanView: TLabel
+        Left = 2
+        Height = 18
+        Top = 201
+        Width = 102
+        Caption = 'You can view...'
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        ParentFont = False
+      end
+      object LabelMailCatcherWindowDisplayTime: TLabel
+        Left = 6
+        Height = 18
+        Top = 109
+        Width = 20
+        Caption = '....'
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        ParentFont = False
+      end
+      object LabelMailCatcherSecond: TLabel
+        Left = 66
+        Height = 18
+        Top = 140
+        Width = 22
+        Caption = 'sec'
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Tahoma'
+        ParentFont = False
+      end
+      object EditMailCatcherWindowDisplayTime: TEdit
+        Left = 6
+        Height = 27
+        Top = 135
+        Width = 55
+        Alignment = taCenter
+        TabOrder = 0
+        Text = '3'
+        OnChange = EditMailCatcherWindowDisplayTimeChange
+      end
+      object CheckBoxMailCatcherEnabled: TCheckBox
+        Left = 6
+        Height = 23
+        Top = 16
+        Width = 77
+        Caption = 'Enabled'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnClick = CheckBoxMailCatcherEnabledClick
+      end
+    end
+    object PanelContainer: TPanel
+      Left = 0
+      Height = 736
+      Top = 24
+      Width = 646
+      BevelColor = clMedGray
+      BevelOuter = bvNone
+      ClientHeight = 736
+      ClientWidth = 646
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 4
+      object PanelGeneral: TPanel
+        Left = 64
+        Height = 682
+        Top = 48
+        Width = 600
+        BevelOuter = bvNone
+        ClientHeight = 682
+        ClientWidth = 600
+        Color = clWhite
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 0
+        Visible = False
+        OnClick = PanelGeneralClick
+        object LabelDocumentRoot: TLabel
+          Left = 2
+          Height = 19
+          Top = 210
+          Width = 116
+          Caption = 'Document Root:'
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          OnClick = LabelDocumentRootClick
+        end
+        object LabelLang: TLabel
+          Left = 4
+          Height = 19
+          Top = 132
+          Width = 74
+          Caption = 'Language:'
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          OnClick = LabelDocumentRootClick
+        end
+        object LabelDataDir: TLabel
+          Left = 2
+          Height = 19
+          Top = 284
+          Width = 64
+          Caption = 'Data Dir:'
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          OnClick = LabelDocumentRootClick
+        end
+        object LabelHostNameFormat: TLabel
+          Left = 0
+          Height = 19
+          Top = 400
+          Width = 77
+          Caption = 'Hostname:'
+        end
+        object CheckBoxAutoVirtualHosts: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 370
+          Width = 193
+          Caption = 'Auto create virtual hosts'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 8
+          OnMouseDown = CheckBoxAutoVirtualHostsMouseDown
+        end
+        object EditDocumentRoot: TEdit
+          Left = 2
+          Height = 27
+          Top = 235
+          Width = 550
+          ReadOnly = True
+          TabOrder = 4
+          Text = 'C:\nexagon\www'
+          OnClick = BtnDocumentRootClick
+        end
+        object CheckBoxRunAtStartup: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 16
+          Width = 266
+          Caption = 'Run Nexagon when Windows starts'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          OnMouseDown = CheckBoxRunAtStartupMouseDown
+        end
+        object CheckBoxAutoStart: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 94
+          Width = 212
+          Caption = 'Start services automatically'
+          TabOrder = 2
+          OnClick = CheckBoxAutoStartClick
+        end
+        object BtnDocumentRoot: TButton
+          Left = 510
+          Height = 24
+          Top = 236
+          Width = 36
+          Caption = '...'
+          TabOrder = 5
+          OnClick = BtnDocumentRootClick
+        end
+        object CheckBoxMinimizeWhenRun: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 55
+          Width = 127
+          Caption = 'Run minimized'
+          TabOrder = 1
+          OnClick = CheckBoxMinimizeWhenRunClick
+        end
+        object ComboBoxLang: TComboBox
+          Left = 4
+          Height = 27
+          Top = 158
+          Width = 200
+          DropDownCount = 30
+          ItemHeight = 19
+          Items.Strings = (
+            'English'
+            'Chinese'
+          )
+          Style = csDropDownList
+          TabOrder = 3
+          OnChange = ComboBoxLangChange
+        end
+        object EditHostnameFormat: TEdit
+          Left = 128
+          Height = 27
+          Top = 392
+          Width = 150
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 9
+          Text = '{name}.test'
+          OnChange = EditHostnameFormatChange
+        end
+        object EditDataDir: TEdit
+          Left = 2
+          Height = 27
+          Top = 309
+          Width = 550
+          ReadOnly = True
+          TabOrder = 6
+          Text = 'C:\nexagon\data'
+          OnClick = BtnDataDirClick
+        end
+        object BtnDataDir: TButton
+          Left = 510
+          Height = 24
+          Top = 310
+          Width = 36
+          Caption = '...'
+          TabOrder = 7
+          OnClick = BtnDataDirClick
+        end
+        object CheckBoxAutoUpdate: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 542
+          Width = 110
+          Caption = 'Auto Update'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 12
+          OnMouseDown = CheckBoxAutoUpdateMouseDown
+        end
+        object CheckBoxAutoBackup: TCheckBox
+          Left = 0
+          Height = 23
+          Top = 456
+          Width = 110
+          Caption = 'Auto Backup'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 10
+          OnMouseDown = CheckBoxAutoBackupMouseDown
+        end
+        object EditBackupInterval: TEdit
+          Left = 128
+          Height = 27
+          Top = 478
+          Width = 45
+          Alignment = taRightJustify
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 11
+          Text = '8'
+          OnChange = EditBackupIntervalChange
+        end
+        object LabelBackupInterval: TLabel
+          Left = 0
+          Height = 19
+          Top = 486
+          Width = 102
+          Caption = 'Every (hours):'
+        end
+        object UpDownBackupInterval: TUpDown
+          Left = 173
+          Height = 27
+          Top = 478
+          Width = 21
+          Associate = EditBackupInterval
+          Max = 24
+          Min = 1
+          Position = 8
+          TabOrder = 13
+          OnChanging = UpDownBackupIntervalChanging
+        end
+      end
+      object PanelServicesAndPorts: TPanel
+        Left = 232
+        Height = 430
+        Top = 8
+        Width = 564
+        BevelOuter = bvNone
+        ClientHeight = 430
+        ClientWidth = 564
+        ParentBackground = False
+        TabOrder = 1
+        object ImageSep: TImage
+          Left = 78
+          Height = 11
+          Top = 115
+          Width = 266
+        end
+        object LabelSep: TLabel
+          Left = 2
+          Height = 19
+          Top = 102
+          Width = 69
+          Caption = 'Advanced'
+          Font.Color = clBlue
+          Font.Height = -16
+          Font.Name = 'Tahoma'
+          ParentFont = False
+        end
+        object LabelApacheSSLPort: TLabel
+          Left = 248
+          Height = 19
+          Top = 12
+          Width = 32
+          Caption = 'SSL:'
+        end
+        object LabelNginxSSLPort: TLabel
+          Left = 248
+          Height = 19
+          Top = 194
+          Width = 32
+          Caption = 'SSL:'
+        end
+        object EditPHPServerPort: TEdit
+          Left = 465
+          Height = 27
+          Top = 251
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 18
+          Text = '8000'
+          Visible = False
+          OnChange = EditPHPServerPortChange
+        end
+        object EditMySqlPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 52
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 5
+          Text = '3306'
+          OnChange = EditMySqlPortChange
+        end
+        object CheckBoxPHPServer: TCheckBox
+          Left = 442
+          Height = 23
+          Top = 281
+          Width = 106
+          Caption = 'PHP Server:'
+          TabOrder = 19
+          Visible = False
+          OnClick = CheckBoxPHPServerClick
+        end
+        object CheckBoxMySql: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 56
+          Width = 76
+          Caption = 'MySQL:'
+          TabOrder = 4
+          OnClick = CheckBoxMySqlClick
+        end
+        object EditApachePort: TEdit
+          Left = 165
+          Height = 27
+          Top = 8
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 1
+          Text = '8110'
+          OnChange = EditApachePortChange
+        end
+        object CheckBoxApache: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 12
+          Width = 79
+          Caption = 'Apache:'
+          TabOrder = 0
+          OnClick = CheckBoxApacheClick
+        end
+        object CheckBoxMemcached: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 240
+          Width = 109
+          Caption = 'Memcached:'
+          TabOrder = 12
+          OnClick = CheckBoxMemcachedClick
+        end
+        object EditMemcachedPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 236
+          Width = 55
+          Alignment = taRightJustify
+          Enabled = False
+          ReadOnly = True
+          TabOrder = 13
+          Text = '11211'
+          OnChange = EditMemcachedPortChange
+        end
+        object CheckBoxRedis: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 285
+          Width = 65
+          Caption = 'Redis:'
+          TabOrder = 14
+          OnClick = CheckBoxRedisClick
+        end
+        object EditNginxPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 191
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 9
+          Text = '8080'
+          OnChange = EditNginxPortChange
+        end
+        object EditRedisPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 281
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 15
+          Text = '6379'
+          OnChange = EditRedisPortChange
+        end
+        object EditApacheSSLPort: TEdit
+          Left = 289
+          Height = 27
+          Top = 8
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 2
+          Text = '443'
+          OnChange = EditApacheSSLPortChange
+        end
+        object CheckBoxNginx: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 195
+          Width = 62
+          Caption = 'Nginx'
+          TabOrder = 8
+          OnClick = CheckBoxNginxClick
+        end
+        object CheckBoxPostgreSQL: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 152
+          Width = 103
+          Caption = 'PostgreSQL'
+          Enabled = False
+          TabOrder = 6
+          OnClick = CheckBoxPostgreSQLClick
+        end
+        object CheckBoxApacheSSLEnabled: TCheckBox
+          Left = 362
+          Height = 23
+          Top = 12
+          Width = 77
+          Caption = 'Enabled'
+          TabOrder = 3
+          OnMouseDown = CheckBoxApacheSSLEnabledMouseDown
+        end
+        object CheckBoxMongoDB: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 330
+          Width = 89
+          Caption = 'MongoDB'
+          TabOrder = 16
+          OnClick = CheckBoxMongoDBClick
+        end
+        object EditNginxSSLPort: TEdit
+          Left = 289
+          Height = 27
+          Top = 191
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 10
+          Text = '8443'
+          OnChange = EditNginxSSLPortChange
+        end
+        object CheckBoxNginxSSLEnabled: TCheckBox
+          Left = 362
+          Height = 23
+          Top = 195
+          Width = 77
+          Caption = 'Enabled'
+          TabOrder = 11
+          OnMouseDown = CheckBoxNginxSSLEnabledMouseDown
+        end
+        object EditMongoDBPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 326
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 17
+          Text = '27017'
+          OnChange = EditMongoDBPortChange
+        end
+        object EditPostgreSQLPort: TEdit
+          Left = 165
+          Height = 27
+          Top = 148
+          Width = 55
+          Alignment = taRightJustify
+          TabOrder = 7
+          Text = '5432'
+          OnChange = EditPostgreSQLPortChange
+        end
+        object CheckBoxMailpit: TCheckBox
+          Left = 2
+          Height = 23
+          Top = 375
+          Width = 67
+          Caption = 'Mailpit'
+          TabOrder = 20
+          OnClick = CheckBoxMailpitClick
+        end
+        object EditMailpitPort: TEdit
+          Left = 168
+          Height = 27
+          Top = 371
+          Width = 55
+          Alignment = taRightJustify
+          NumbersOnly = True
+          TabOrder = 21
+          Text = '1025'
+          OnChange = EditMailpitPortChange
+        end
+      end
+    end
+  end
+end

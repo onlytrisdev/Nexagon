@@ -1,0 +1,114 @@
+object FormVirtualHosts: TFormVirtualHosts
+  Left = 0
+  Top = 0
+  BorderStyle = bsSizeToolWin
+  Caption = 'Virtual Hosts Synchronization'
+  ClientHeight = 319
+  ClientWidth = 544
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 544
+    Height = 259
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'PanelTop'
+    TabOrder = 0
+    ExplicitWidth = 470
+    object LVH: TListView
+      Left = 0
+      Top = 0
+      Width = 544
+      Height = 259
+      Align = alClient
+      Columns = <      
+        item
+          Caption = 'Id'
+        end      
+        item
+          Alignment = taRightJustify
+          Caption = '#'
+        end      
+        item
+          Caption = 'Local Access'
+        end      
+        item
+          Caption = 'LAN Access'
+        end>
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      ViewStyle = vsReport
+      ExplicitWidth = 470
+    end
+  end
+  object PanelBottom: TPanel
+    Left = 0
+    Top = 259
+    Width = 544
+    Height = 60
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    ExplicitWidth = 470
+    object BtnOK: TButton
+      Left = 387
+      Top = 25
+      Width = 72
+      Height = 25
+      Caption = 'Deactivate'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object BtnCancel: TButton
+      Left = 473
+      Top = 25
+      Width = 60
+      Height = 25
+      Caption = 'Close'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      OnClick = BtnCancelClick
+    end
+    object CheckBox2: TCheckBox
+      Left = 13
+      Top = 33
+      Width = 289
+      Height = 17
+      Caption = 'Allow access from LAN'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+end

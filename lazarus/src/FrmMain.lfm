@@ -1,0 +1,2732 @@
+object MainForm: TMainForm
+  Left = 654
+  Height = 620
+  Top = 279
+  Width = 1024
+  Caption = 'Nexagon'
+  ClientHeight = 620
+  ClientWidth = 1024
+  Color = clBtnFace
+  DesignTimePPI = 120
+  DoubleBuffered = False
+  Font.Color = clWindowText
+  Font.Height = -17
+  Font.Name = 'Arial'
+  ParentDoubleBuffered = False
+  PopupMenu = PopupMenuTray
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  Scaled = False
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  OnResize = FormResize
+  OnShow = FormShow
+  OnWindowStateChange = FormWindowStateChange
+  object ImageInfo: TImage
+    Left = 418
+    Height = 25
+    Top = 36
+    Width = 24
+    Visible = False
+    OnMouseEnter = ImageInfoMouseEnter
+  end
+  object ImageInfo_Hover: TImage
+    Left = 16
+    Height = 25
+    Top = 88
+    Width = 33
+    OnMouseLeave = ImageInfo_HoverMouseLeave
+  end
+  object LabelQuote: TLabel
+    Left = 80
+    Height = 19
+    Top = 456
+    Width = 278
+    Caption = 'Simplicity is the ultimate sophistication'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    Visible = False
+    OnClick = LabelQuoteClick
+  end
+  object LabelCreator: TLabel
+    Left = 23
+    Height = 11
+    Top = 123
+    Width = 34
+    Caption = #194#169' Leo K'
+    Color = clBtnFace
+    Font.Color = clBlack
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+    OnClick = LabelCreatorClick
+  end
+  object LabelXipIO: TLabel
+    Left = 34
+    Height = 22
+    Top = 152
+    Width = 44
+    Caption = 'xip.io'
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Arial'
+    ParentFont = False
+    Visible = False
+    OnClick = LabelXipIOClick
+    OnMouseEnter = LabelHelpMouseEnter
+    OnMouseLeave = LabelHelpMouseLeave
+  end
+  object LabelDonate: TLabel
+    Left = 63
+    Height = 11
+    Top = 123
+    Width = 37
+    Caption = 'Donation'
+    Color = clBtnFace
+    Font.Color = clBlack
+    Font.Height = -9
+    Font.Name = 'Tahoma'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+    OnClick = LabelDonateClick
+    OnMouseEnter = LabelDonateMouseEnter
+    OnMouseLeave = LabelDonateMouseLeave
+  end
+  object ImageAutoDetect: TImage
+    Left = 823
+    Height = 34
+    Top = 56
+    Width = 46
+    ParentShowHint = False
+    ShowHint = True
+    Visible = False
+  end
+  object LabelStatus: TLabel
+    Left = 14
+    Height = 12
+    Top = 324
+    Width = 46
+    Caption = 'Processing'
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Arial'
+    ParentFont = False
+    Visible = False
+  end
+  object PanelRuntimeInfo: TPanel
+    Left = 88
+    Height = 300
+    Top = 88
+    Width = 572
+    BevelOuter = bvNone
+    ClientHeight = 300
+    ClientWidth = 572
+    Color = clWhite
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    OnClick = PanelRuntimeInfoClick
+    OnMouseDown = FormMouseDown
+    object LabelRuntimeInfo: TLabel
+      Left = 200
+      Height = 19
+      Top = 0
+      Width = 126
+      Caption = 'LabelRuntimeInfo'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      ParentFont = False
+    end
+    object LabelServiceStatusTodo: TLabel
+      Left = 148
+      Height = 19
+      Top = 24
+      Width = 5
+      Caption = '.'
+      Color = clLime
+      Font.Color = clLime
+      Font.Height = -17
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+  end
+  object PanelSlogan: TPanel
+    Left = 34
+    Height = 20
+    Top = 370
+    Width = 392
+    BevelOuter = bvNone
+    ClientHeight = 20
+    ClientWidth = 392
+    Color = clWhite
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 9
+    object LabelDonationNo: TLabel
+      Left = 303
+      Height = 15
+      Top = 15
+      Width = 18
+      Caption = 'NO'
+      Color = clWhite
+      Font.Color = clFuchsia
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+      OnClick = LabelDonationNoClick
+    end
+    object LabelSloganDel: TLabel
+      Left = -16
+      Height = 1
+      Top = 20
+      Width = 1
+      Color = clWhite
+      Font.Color = clBlack
+      Font.Height = -83
+      Font.Name = 'Arial'
+      ParentColor = False
+      ParentFont = False
+      OnClick = LabelSloganDelClick
+    end
+    object LabelSlogan: TLabel
+      Left = 8
+      Height = 16
+      Top = 0
+      Width = 44
+      Caption = 'The dev'
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentFont = False
+    end
+  end
+  object BtnCheckService: TButton
+    Left = 416
+    Height = 25
+    Top = 104
+    Width = 137
+    Caption = 'Check Service'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    OnClick = BtnCheckServiceClick
+  end
+  object Button1: TButton
+    Left = 445
+    Height = 25
+    Top = 256
+    Width = 88
+    Caption = 'Button1'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 456
+    Height = 25
+    Top = 365
+    Width = 75
+    Caption = 'Button2'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+    OnClick = Button2Click
+  end
+  object MemoResetMySQLOutput: TMemo
+    Left = 620
+    Height = 165
+    Top = 160
+    Width = 604
+    Color = clBlack
+    Font.Color = clWhite
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Lines.Strings = (
+      'MySQL is running, trying to stop it....'
+      'Start MySQL without grant table'
+      'Update MySQL'
+      'Change password'
+      'Start previous running MySQL'
+    )
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 8
+    Height = 25
+    Top = 323
+    Width = 113
+    Caption = 'Create Console'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 5
+    Visible = False
+    OnClick = Button3Click
+  end
+  object Button5: TButton
+    Left = 800
+    Height = 25
+    Top = 104
+    Width = 97
+    Caption = 'Start Service'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 6
+    Visible = False
+    OnClick = Button5Click
+  end
+  object PanelCron: TPanel
+    Left = 680
+    Height = 116
+    Top = 200
+    Width = 290
+    Caption = 'PanelCron'
+    ClientHeight = 116
+    ClientWidth = 290
+    ParentBackground = False
+    TabOrder = 7
+    Visible = False
+    object pnlCronString: TGroupBox
+      Left = 1
+      Height = 114
+      Top = 1
+      Width = 314
+      Align = alLeft
+      Caption = 'Cron string decoder'
+      ClientHeight = 90
+      ClientWidth = 310
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      object labSample: TStaticText
+        Left = 22
+        Height = 30
+        Top = 68
+        Width = 277
+        Anchors = [akTop, akLeft, akRight]
+        Caption = '(every minute)'
+        TabOrder = 21
+      end
+      object edCronString: TEdit
+        Left = 22
+        Height = 27
+        Top = 41
+        Width = 202
+        TabOrder = 0
+        Text = '* * * * * * * *'
+        OnChange = edCronStringChange
+      end
+      object StaticText1: TStaticText
+        Left = 6
+        Height = 19
+        Top = 18
+        Width = 65
+        Caption = 'Cron string'
+        TabOrder = 1
+      end
+      object btnReset: TBitBtn
+        Left = 119
+        Height = 25
+        Top = 339
+        Width = 190
+        Caption = 'Reset'
+        TabOrder = 2
+      end
+      object StaticText2: TStaticText
+        Left = 6
+        Height = 19
+        Top = 104
+        Width = 116
+        Caption = 'Cron string decoded'
+        TabOrder = 3
+      end
+      object edMinute: TEdit
+        Left = 113
+        Height = 27
+        Top = 123
+        Width = 190
+        TabOrder = 4
+        Text = '*'
+      end
+      object StaticText3: TStaticText
+        Left = 6
+        Height = 17
+        Top = 127
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Minute'
+        TabOrder = 5
+      end
+      object edHour: TEdit
+        Left = 113
+        Height = 27
+        Top = 150
+        Width = 190
+        TabOrder = 6
+        Text = '*'
+      end
+      object StaticText4: TStaticText
+        Left = 6
+        Height = 17
+        Top = 154
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Hour'
+        TabOrder = 7
+      end
+      object edDayOfMonth: TEdit
+        Left = 113
+        Height = 27
+        Top = 177
+        Width = 190
+        TabOrder = 8
+        Text = '*'
+      end
+      object StaticText5: TStaticText
+        Left = 6
+        Height = 17
+        Top = 181
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Day of the Month'
+        TabOrder = 9
+      end
+      object edMonthOfYear: TEdit
+        Left = 113
+        Height = 27
+        Top = 204
+        Width = 190
+        TabOrder = 10
+        Text = '*'
+      end
+      object StaticText6: TStaticText
+        Left = 6
+        Height = 17
+        Top = 208
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Month of the Year'
+        TabOrder = 11
+      end
+      object edDayOfTheWeek: TEdit
+        Left = 113
+        Height = 27
+        Top = 231
+        Width = 190
+        TabOrder = 12
+        Text = '*'
+      end
+      object StaticText7: TStaticText
+        Left = 6
+        Height = 17
+        Top = 235
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Day of the Week'
+        TabOrder = 13
+      end
+      object edYear: TEdit
+        Left = 113
+        Height = 27
+        Top = 258
+        Width = 190
+        TabOrder = 14
+        Text = '*'
+      end
+      object StaticText9: TStaticText
+        Left = 6
+        Height = 17
+        Top = 262
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Year'
+        TabOrder = 15
+      end
+      object edExecutionLimit: TEdit
+        Left = 113
+        Height = 27
+        Top = 312
+        Width = 190
+        TabOrder = 16
+        Text = '*'
+      end
+      object StaticText11: TStaticText
+        Left = 6
+        Height = 17
+        Top = 316
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'ExecutionLimit'
+        TabOrder = 17
+      end
+      object edSecond: TEdit
+        Left = 113
+        Height = 27
+        Top = 285
+        Width = 190
+        TabOrder = 18
+        Text = '*'
+      end
+      object StaticText10: TStaticText
+        Left = 6
+        Height = 17
+        Top = 289
+        Width = 101
+        Alignment = taRightJustify
+        Caption = 'Second'
+        TabOrder = 19
+      end
+      object btnSamples: TButton
+        Left = 230
+        Height = 25
+        Top = 37
+        Width = 75
+        Caption = 'Samples'
+        TabOrder = 20
+        OnClick = btnSamplesClick
+      end
+      object Memo1: TMemo
+        Left = 49
+        Height = 39
+        Top = 0
+        Width = 458
+        ScrollBars = ssVertical
+        TabOrder = 22
+      end
+    end
+    object pnlIntervalTest: TGroupBox
+      Left = 289
+      Height = 114
+      Top = 1
+      Width = 0
+      Align = alClient
+      Caption = 'Interval preview'
+      ClientHeight = 109
+      ClientWidth = 0
+      ParentBackground = False
+      TabOrder = 1
+      object btnCalculate: TBitBtn
+        Left = 0
+        Height = 25
+        Top = 108
+        Width = 0
+        Align = alTop
+        Caption = 'Calculate 100 intervalls'
+        TabOrder = 0
+        OnClick = btnCalculateClick
+      end
+      object memCalculatedIntervals: TMemo
+        Left = 0
+        Height = 0
+        Top = 109
+        Width = 0
+        Align = alClient
+        ScrollBars = ssVertical
+        TabOrder = 1
+      end
+      object StaticText12: TStaticText
+        Left = 0
+        Height = 19
+        Top = 89
+        Width = 0
+        Align = alTop
+        Caption = '(Note: Ignores executionlimit)'
+        TabOrder = 2
+      end
+      object Panel2: TPanel
+        Left = 0
+        Height = 72
+        Top = 17
+        Width = 0
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 72
+        ClientWidth = 0
+        ParentBackground = False
+        TabOrder = 3
+        object StaticText8: TStaticText
+          Left = 14
+          Height = 19
+          Top = 15
+          Width = 107
+          Caption = 'Start date and time'
+          TabOrder = 0
+        end
+      end
+      object StaticText13: TStaticText
+        Left = 0
+        Height = 17
+        Top = 0
+        Width = 0
+        Align = alTop
+        Caption = 'Results:'
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 4
+      end
+      object Button6: TButton
+        Left = 239
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Load'
+        TabOrder = 5
+        OnClick = Button6Click
+      end
+      object memLog: TMemo
+        Left = 0
+        Height = 0
+        Top = 109
+        Width = 0
+        Align = alClient
+        ScrollBars = ssVertical
+        TabOrder = 6
+      end
+    end
+  end
+  object Button7: TButton
+    Left = -26
+    Height = 25
+    Top = 144
+    Width = 75
+    Caption = 'FileAge'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 8
+    Visible = False
+    OnClick = Button7Click
+  end
+  object BtnDebugTest: TButton
+    Left = 424
+    Height = 25
+    Top = 144
+    Width = 132
+    Caption = 'DEBUG = True'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 10
+    Visible = False
+    OnClick = BtnDebugTestClick
+  end
+  object PanelBtns: TPanel
+    Left = 136
+    Height = 63
+    Top = 488
+    Width = 733
+    BevelOuter = bvLowered
+    ClientHeight = 63
+    ClientWidth = 733
+    ParentBackground = False
+    TabOrder = 11
+    object BtnStartAll: TBitBtn
+      Left = 88
+      Height = 30
+      Top = 7
+      Width = 120
+      Caption = 'Start'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 1
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BtnStartAllClick
+    end
+    object btnWeb: TBitBtn
+      Left = 224
+      Height = 29
+      Top = 8
+      Width = 120
+      Caption = 'Web'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 11
+      ParentFont = False
+      TabOrder = 1
+      OnClick = BtnWebClick
+    end
+    object BtnDatabase: TBitBtn
+      Left = 363
+      Height = 30
+      Top = 7
+      Width = 120
+      Caption = 'Database'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 12
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BtnDatabaseClick
+    end
+    object BtnShell: TBitBtn
+      Left = 496
+      Height = 30
+      Top = 7
+      Width = 120
+      Caption = 'Terminal'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 13
+      ParentFont = False
+      TabOrder = 3
+      OnClick = BtnShellClick
+    end
+    object BtnDir: TBitBtn
+      Left = 648
+      Height = 30
+      Top = 8
+      Width = 120
+      Caption = 'Root'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 14
+      ParentFont = False
+      Spacing = 1
+      TabOrder = 4
+      OnMouseDown = BtnDirMouseDown
+    end
+    object BtnStopAll: TBitBtn
+      Left = 128
+      Height = 30
+      Top = 7
+      Width = 78
+      Caption = 'Stop'
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Arial'
+      Images = ImageListMenuTray
+      ImageIndex = 0
+      ParentFont = False
+      TabOrder = 5
+      OnClick = BtnStopAllClick
+    end
+  end
+  object PanelTopBtns: TPanel
+    Left = 408
+    Height = 38
+    Top = 0
+    Width = 600
+    BevelColor = clNone
+    BevelOuter = bvNone
+    ClientHeight = 38
+    ClientWidth = 600
+    Color = clHighlight
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 12
+    object LabelGetLicenseLink: TLabel
+      Left = 0
+      Height = 16
+      Hint = 'Click to add your license key'
+      Top = 16
+      Width = 78
+      Caption = '[Commercial]'
+      Color = clWhite
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = LabelGetLicenseLinkClick
+      OnMouseEnter = LabelGetLicenseLinkMouseEnter
+      OnMouseLeave = LabelGetLicenseLinkMouseLeave
+    end
+    object LabelProfile: TLabel
+      Left = 80
+      Height = 16
+      Top = 16
+      Width = 46
+      Caption = '[default]'
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = LabelProfileClick
+      OnMouseEnter = LabelHelpMouseEnter
+      OnMouseLeave = LabelHelpMouseLeave
+    end
+    object LabelHostsFile: TLabel
+      Left = 184
+      Height = 22
+      Top = 8
+      Width = 10
+      Caption = 'h'
+      Font.Color = clWhite
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = LabelHostsFileClick
+    end
+    object LabelHelp: TLabel
+      Left = 144
+      Height = 22
+      Top = 8
+      Width = 11
+      Caption = '?'
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Arial'
+      ParentFont = False
+      OnClick = LabelHelpClick
+      OnMouseEnter = LabelHelpMouseEnter
+      OnMouseLeave = LabelHelpMouseLeave
+    end
+    object ImagePref: TImage
+      Left = 224
+      Height = 25
+      Top = 10
+      Width = 26
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869634702000089504E47
+        0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+        017352474200AECE1CE90000020149444154484BB5D64BC84D511407F0DF67C6
+        849092D784624226948889321206CAC0734479954714251179258F30F11C9001
+        65A44C88140662C2C0C42B25C48419CEBAADA3D371EF77EFF55D7B76D6DE6BFF
+        D75AFFFD5FEBF4F9CFABAF8BFBA762499EBF89679DF8760A30073BF11EBF3016
+        0770BF1D48A70007F10EA7F2C20D18831DBD02388FCBB89B17CEC54AACE91660
+        349662085EE001D6612256E3675E380817F00A67301B93F103D7F1A104AE9628
+        9CAEE16B12180EC3F11617F1B2166DECAFC2787CCE80A661189695C154013661
+        12D6B74BBBCD7EF014991D8F735580DD188AAD2D2E988EF9B977074F5B9C3B8C
+        6FD857079881BD88377EAEE6BC1D5B7025EDCB71B4E0EA50ED5CF0B5B0B0EDC1
+        A33A407C075951A220EE5E3A47E4B71101BC4EDB043CC6824A26F3B0B6E0ED04
+        1E3623B9B485A04666C4618BE8473529DD117CAC6411DF9F109AF9B39A092DC4
+        130025173D0598858D385B1155B7258A5714FA69AC6A0633939C5BC94135D34E
+        490E0E16215EE4933AC0AE7CA6DB06F84C8FA5F0F6D70136674B18A8D04EA7EA
+        4FD601A2555CADB48A29185134B4376D5AC5B882B72F7969D92AA29FFDC54118
+        CA6637381DBA697611D0F7FE9A5D8BD237CCD1AE2F55C417A25AF12FEDBA1548
+        8827A659A3AEA9F6986A3D1B38E5C88CA9164F3BA6594F4766441D042ECE0C6E
+        143F00CFFBAB692B923BF1E9EACC6FEACA74193AC0FA160000000049454E44AE
+        426082
+      }
+      OnClick = BtnConfigClick
+      OnMouseEnter = ImagePrefMouseEnter
+    end
+    object ImagePref_Hover: TImage
+      Left = 272
+      Height = 25
+      Top = 10
+      Width = 26
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963D703000089504E47
+        0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+        017352474200AECE1CE90000039149444154484BB5955D681C5514C77F67E6CE
+        92B60A469B66261B9B2255D02AF8416C339B94F88D82ADA279517CF05914AAA2
+        454A4145A4852A22E8A36F22D4075344905A8C2499D0AA58A5D207ED079A6467
+        D3567D101376EECE9199CDA6BBB12631EA7D9AB9E7DEF3BFE7E3FF3FC2FFBC64
+        25FEF5DECE75C9EFF2AEC0C3800291E2EE2E4453C797BBBF2280240C3E02DDD9
+        EC4CE0B45B8CAF9383D49602591640C3A0C7A267815F8D6BB7902256CD09A0BD
+        46BAB92D9A39F58F00B4B7C3679D676564FA7C76D186FEA30A07818FBD287E30
+        DB4BFAFC4F10EE17183251FC61B6A7037E07733557BE3C172F8AB4FEAB20360C
+        DE047D1A70806F144E083C06B88A3E53882A6FE70061F02CE8810C5F85F745B9
+        09B80548517DCB4C549E937AAD58485112067B405F05AAC00520687AC93E2F8A
+        7737FEF3C7F4751E406457D39969600360107DC91BAFBCBE00A083189BF83FA3
+        F838DCE18DC523D5FECEADA8F47A3887647CFAA74BE5594B5D1B13ADEDC4E158
+        61AC7234D9D679378E1C069D32C54A4FD6007904DAD75DB46227B36FA3A65B26
+        26A79A1D56FB83DB24D5BDC03DF3FB87D591570A63E5AF9BCFCD6EF337198733
+        B91F970D321A9FAB03806343FF5BE046E02BE3F24066CC6CF3CE4781358BA298
+        5547061A20597358E31E41B801F4B81755B29A5CAC816EEFBADA5AFD00340489
+        BCA85CAA17D41F067608BCE7169C17B2BD5A35DDAFF02470C88BE29C1F49E867
+        D1DC8A72D4601E6964A185073AD87199ADBA59AA2E3785B6AB64E4EC6F49E8FF
+        91BDDE149C8E46EBEA60D77A5B4DB30867BD285EABFD1BDB6D5AFD25E78A9AA2
+        4C4CCE36A26D05E8EB5E63C566F96F3785B6F6FF1420EB08AB69469A5EE09817
+        C55B579522F8DCA879A22545F345FE0ED8029C3449EDCE0623575CE481F581B5
+        E6B34B16B9A54D5DDB25A3E7CBAB69D37AA3A439675ADBB49968A4A117CD4CE4
+        444BB9DD1377F86F8916063D09E98E05A285C176D02FFE42B43CD7257F2FCACB
+        C0B4C09CC2354B4A45C9DF8FF27C53B79C52585B9718D9E345E5D75A7930846B
+        A7FC4F81BBE60DA753614C94C7EB62C75385287E27275F29D825AA6F34C4CE51
+        FA9B1E74C414E3FB1A73A2B54DC1A996FCEB1DE44AD3558EB24317E55A86BDA8
+        FC501EED22B9CEB5AC1A84A9E885C2787C5232559D5FCB0E9CB9BE8ECDAEB83F
+        B40E1CF77B902B56357016ABA60EE12653FE8F029B9A6DA29C71BBE36BFFF5C8
+        CC731E166F16EC3E907061E83BE98B85B1994C20975CCBA6683907CBD9FF0428
+        7ED2287A3945370000000049454E44AE426082
+      }
+      OnClick = BtnConfigClick
+      OnMouseLeave = ImagePref_HoverMouseLeave
+    end
+    object BtnLicense: TSpeedButton
+      Left = 24
+      Height = 23
+      Top = 0
+      Width = 89
+      AutoSize = True
+      Caption = 'Non-Commercial'
+      Font.Color = clWindowText
+      Font.Height = -10
+      Font.Name = 'Arial'
+      ParentFont = False
+      OnMouseDown = BtnLicenseMouseDown
+    end
+  end
+  object PanelNotification: TPanel
+    Left = 104
+    Height = 38
+    Top = 64
+    Width = 456
+    BevelColor = clInactiveCaption
+    ClientHeight = 38
+    ClientWidth = 456
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 13
+    object LabelNotification: TLabel
+      Left = 40
+      Height = 15
+      Top = 16
+      Width = 249
+      Alignment = taCenter
+      Caption = '[Auto Update] PHP updated to version 24.10.5'
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+    end
+    object BtnNotificationOK: TButton
+      Left = 392
+      Height = 25
+      Hint = 'OK'
+      Top = 8
+      Width = 43
+      AutoSize = True
+      Caption = 'OK'
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = BtnNotificationOKClick
+    end
+  end
+  object Button4: TButton
+    Left = 456
+    Height = 31
+    Top = 32
+    Width = 94
+    Caption = 'Backup'
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 14
+    Visible = False
+    OnClick = Button4Click
+  end
+  object Button8: TButton
+    Left = 120
+    Height = 33
+    Top = 24
+    Width = 298
+    AutoSize = True
+    Caption = 'Backup - WHY USE RUST lara'
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabOrder = 15
+    Visible = False
+    OnClick = Button8Click
+  end
+  object PanelTopLeft: TPanel
+    Left = 0
+    Height = 58
+    Top = 0
+    Width = 95
+    AutoSize = True
+    BevelOuter = bvNone
+    Caption = 'PanelTopLeft'
+    ClientHeight = 58
+    ClientWidth = 95
+    ParentBackground = False
+    TabOrder = 16
+    object ImageNexagonSymbol: TImage
+      Left = 0
+      Height = 58
+      Top = 0
+      Width = 55
+      AutoSize = True
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963BB09000089504E47
+        0D0A1A0A0000000D49484452000000370000003A08060000001445C198000009
+        824944415478DAED5A796C1CF515FEDE6F8E9D3D1DE32404044621A149231004
+        41C39103CAD51A559836B450D2404BA01C22852204A4124520050A052ADA7008
+        D29292944351097FA42194B684235CA1A1696BA0942314420EE3D8DE6B66767E
+        EFF58F995DAFD7EBD84EEC1090475AD9BB1EAD7FDF7BDFFBDE352422F8B25E0A
+        5FE26B14DC28B85170A3E0BE38E00440C002168025FC7D6F251F1AC93CA70530
+        68E87F1BAECB1C11502C50443008E8F6987EB7A93863DD475E2B189873486CD5
+        0F8F8CBF9A89291101580486A27DDF732C0201553CF2589B3BE98E570B4B3717
+        627310F88000A46C343BEEBA6B4F485C74EEE1F1F7CA5E248406D9E7C089005A
+        0466E481F59FF80DB7BD9CBF79FD3663217C1786F65C612808A000D6643B3062
+        387E82DC73C3ACE48DC737DB5D8862D320C27061DC6370D5B1B3B92B30EF78AD
+        70C1A36DEE43A46C282FEB0BA098C9040314594289042460B652364A3ECE3DDC
+        5970EDECD4B2E6463318CE78DC6D702CA1162A22144A8CFBFF513CE1376F1496
+        77737C22F29DAC80400B6C48289924918BA3F710C010F185C584D3A01AC8FBE0
+        8AE393F32E9991589FB015580400614FC271C8E0240256B6EC93FF2936FFF2F5
+        E2BDEF166267723E0BA54BBE16B2AB41D40356F99C0506D86758B6E1A43139ED
+        AEBE6676EAF2D623121F85E2042815797D24C155D3E5EFDB4AC95B5FC92D7A6E
+        AB5A942BFA10CF75E38A6C539162961A607DC155035600022DEC79E293197352
+        8E8D598760F10DA7A4174F3FC8CEEF2E55070D2E2409F0694E1B77BD519CBBAC
+        ADF8B05631C7CB76F9330E8CA9039286F9C2660F9F1534122641EBC1012300AE
+        2F688A2BCC9AE8606B772978ED438F63F18C6D68D79D7F6CF2C29F9C945A7940
+        83A9453024B119109C945101786053E1A8BB371457B4EBF83455EC44CE0DFC2B
+        8FC9D8B77F7D0C00E0EDF612CE7A7C073EEED2489A04D603032B0582F149034F
+        5DB43FA68EB70000D73FD58125CF77FA294BD9B01AD068BB6D579F9C3E7FC189
+        A9372B07A76128BFC2B3082E7D66E7A53FDB686DDC5108A619EE4E576BE654CC
+        B0171E9B0600785A3075AC85C7BE3D164993500A00451130D48F3D0340CE157C
+        E78804A68EB7E096C29BAF9C9341CA56363358795DEE67DDC1B41BD762E3157F
+        D87EA960F0E59B1A28C61401ABDF770F5CF9B1739FD9DD5EA0A0C49AE16821E5
+        28828A0C602B42C0C0F4036C3CDCDA043F107045FE2360E80D16209008123685
+        22A522FA131037085A436981431CB0E1B6179EFC977DDF9A7F160E54149E6D8F
+        C09529FBCC87DE190A1C08580948F5128A1ED6C25440C040CB57E2B8BBA5119D
+        45864219186A80F578911915C9A7EA7028DB43A0448B32848367FF5D3CA3FA6C
+        BB0D8E2262174A92E240CC1E9E56BD6A8BD508E025C7A470C3EC06B4E71926D5
+        8F3DAA8ABDFAF150753F089AC52C789C8A7C3E3C2D0F95ED58F654B50AD6B90C
+        15E6A75B4E1B83F9D39368CF6958AAF6C0D2AF81AA821D10A9503B4A1B83CE5D
+        6A480564BDBCD5CFC11485C9FEBED6269C3CC941479E61AAB2D7644006948D48
+        B50619F6669531A8C30080AF2594E988358E45587EDE384C1967215B14983438
+        60F52A9AA176B96AF009B19FA45C51D6F0CD03AF65B1718B5F8908CDC0F89481
+        C7E68D47639CE09624140F0120D45B41FB89B7F2FF0CCBB5911833D45243AA54
+        B0EAE38F3B35CE5BB1035D2E4351484FCDC057F7B7F0C8F9E3C2F648971D2BBD
+        BEA3D698B5AA3A223314C57D3D46FDD0648CA3F0CE271E7EF4443B4AD1BC4445
+        0A7AD2E43896CC1D8BACCB20D4C4533D63A2F7DF69A46859ED31EC42544A5AE0
+        241456B71570D5931DA1B070A8A00103E71F93C24DDF6C44474E4729622011EB
+        1132193970B5A940FAB5781000E312061E78398BDBFED259490DE59FD79F3E06
+        979C98C18EACAE28E8AEF25CAF2A6724638E06A35C127A696C42E1A6353BB162
+        430E6604AC9C22EE3EA7092D872750C8322CA3BED7F64E2AA8D79B61604A090B
+        D2B6C2154FB4E3B9775D982A0446002C83B074FE784C3DC842678107AC507647
+        54069F0A500798ECCA1002891A4C02307FD976BCB5D50F8BE36840DB105778F4
+        C7137070A3D9B78DA9A79632B48E5C0D390DD4F6667D4BB55E15086BC031099D
+        798DEF2FDD8EED590DA57ABEF6A88363B87876262CDB6A9B34A913EBBC17D492
+        FA8B813A1585D682748CF0CE561FF37FBBBDD2B745153F6CB30E28AEBA61442B
+        14E1FA3130A0A77B8421D0C07E0985BFBD5DC4E52B76548465973CEBD541A087
+        CFC3094E18D437150C24E1D4533245AF52008C4D2A2C5FDF8D9FAFEAA8A48601
+        6BCBAAEF95B066DB7370E5863061A99C5214D41DD3D52B2CA4AAB4AAF1A2D682
+        712903B7FF69271E5AD71DF67FBABE916AEB594514C42D951BD666F5B4C9CE5A
+        66652A2626D15CAB5C5235A855A86A6BEA76DF61C5D2E0285CF3E80EACD99487
+        6984A3F4EADB542F5A3213C02C649E7A64626DF5D9761B9C11C545CB94F89673
+        0EF52ED389A68490A50C886B10D82B09246A26CB09BAE0497D4A557952A27ECF
+        56C08207B7E1CDCD1E4C4561BB1411C3F30506810D820B984ADB4D89B38F0E2E
+        FBC6D1C92DE579CB1EC71C452DFD92D6A6FB6F99C9D3C7268D361D1BE3180495
+        73B5FFEBE7BB2B7DDBDBDB4AF8E39B79A46314C6526DBB52ED3D2DB00D42C113
+        FC60C956BCB3C5472C52CD254FEF44AEA87D83A0D8CC384D19ABEDA6B3D5F47B
+        2E9E703F110D3AD70D7E281B0D443FED0E8C5FBD909FFBC886FCC34C31C7CD77
+        FB5F6B8EA90969CB7CF1BF4574E4341C93205C07584DBE240ED951F004FB2515
+        664E89636B6729D8F0AECB8E93B19576DD7973D2172E6CC9AC9CD0380243D9FE
+        C6E91B3FF193B73E9B5DF4C28758942B44E3740BB649A47830C0A4D75C048166
+        763DF10DC371928E8D9987D1E2EB5A1B161F3531962F37BD86DACB8B90559B0A
+        CD77FE3577EFFB9DF699DACD4271C9D75AD9BB02575B0C2BB02FB06CCB4EE3D0
+        FD4AABAF3A337DF959C726F7EE22A4DF1596CF78F0A5FC09F7AECB2DEF2AC526
+        C2ED62050998C906F70FCC20F199C524AB41650CFF83CB4E4FCF5B704A6A7D22
+        F639ADB07645D58F3A02F3CE3F672F78FCF57CB87C2CE57C61281632CB950531
+        A0200101CC2A6943FBF8DE71C90557B76496358FB382DDA5E05E5B1BBFF2BED7
+        F08BA7B337BFF2011622F0C2B5B1880A9332B186ED40D9983151EEB9EE5B0D37
+        1E779813AE8D75B8FCDF67D6C67D16FE4215AB3FFE7A7ED25D6BB24BFFD76DCF
+        41508A16FE160E4E7BEB7EDA92B9E8BBC725DF2B7B8A681F5DF8F7F7A80611D0
+        5D64FAFD4BB9192FBE556C05809953E2ABE6CF4ABD9A897FC11ED5E80BB2FFD8
+        19AEB8FADCC055C76399722CC3FB38C6E70A0EA34FED8D821B05370A6E14DC3E
+        7EFD1FD6DAFD7A372E6B600000000049454E44AE426082
+      }
+      Stretch = True
+      StretchOutEnabled = False
+      StretchInEnabled = False
+      Transparent = True
+      OnClick = ImageNexagonSymbolClick
+      OnMouseEnter = ImageNexagonSymbolMouseEnter
+      OnMouseLeave = ImageNexagonSymbolMouseLeave
+    end
+    object LabelMenu: TLabel
+      Left = 57
+      Height = 18
+      Top = 6
+      Width = 38
+      Caption = 'Menu'
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Arial'
+      ParentFont = False
+      OnClick = LabelMenuClick
+      OnMouseEnter = LabelHelpMouseEnter
+      OnMouseLeave = LabelHelpMouseLeave
+    end
+  end
+  object TimerLazyStart: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerLazyStartTimer
+    Left = 456
+    Top = 440
+  end
+  object TimerMustRestart: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerMustRestartTimer
+    Left = 496
+    Top = 216
+  end
+  object TimerForceClose: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerForceCloseTimer
+    Left = 232
+    Top = 336
+  end
+  object TrayIcon: TTrayIcon
+    PopUpMenu = PopupMenuTray
+    Icon.Data = {
+      9E09000000000100010018180000010020008809000016000000280000001800
+      0000300000000100200000000000000900000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000AA550003FF0000010000000000000000FF000001AA5500030000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000FFFF
+      0001FF5500030000000000000000E36B1740E36B17400000000000000000FF55
+      0003FFFF00010000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000FF000001BF7F00040000
+      000000000000E072153AE46F16BEE87019FFE86E19FFE26A18BEE0651A3A0000
+      000000000000BF3F0004FF000001000000000000000000000000000000000000
+      000000000000000000000000000000000000FFAA00030000000000000000DD88
+      331EE476179BE37217FEEA7418FFDC6B17FDDB6917FDE86D19FFE16818FEE167
+      1A9BDD77331E0000000000000000FF5500030000000000000000000000000000
+      0000000000000000000000000000FF7F000200000000C6713809E2740A76E26F
+      05ECEE7A14FFDE7217FEDD6F16FCDE6E17FFDD6C17FFDC6917FCDC681AFEEB6B
+      18FFDF5B08ECDE5C0F76C6713809000000007F7F000200000000000000000000
+      00000000000000000000FF00000100000000E3821552E57A0ED4F39030FFEFAD
+      6FFFDF7D24FCDE7112FFDF7217FFDE6F17FFDE6D17FFDD6D19FFDC6613FFDC6D
+      21FCEDA272FFEF7B33FFDF6013D4DC631B5200000000FF000001000000000000
+      000000000000FF7F0002AA550003DF81139CF28A19FFE67906FFF3D0ACFBFFFF
+      FFFEF0BD8EFFDD6B05FFE0751AFFDE7116FFDE7018FFDE6D16FFDC6812FFF6D5
+      BEFFFFFFFFFEF2CAAFFBE15D0CFFEC6A1EFFD95E189CAA5500037F7F00020000
+      0000AA55000300000000E385102EED8914FFE18216FDDE7708FDF7D8B8FFFFFD
+      FCFFF2C79FFFDE6E05FFDF771AFFDF7317FFDF7218FFDC6609FFF2C8A8FFFFFF
+      FFFFFEFDFCFFF5D3BCFFD95C0DFDDC641BFDE5651AFFDD5E1B2E00000000AA55
+      0003FFAA000300000000E183113CE98914FDE18316FEE07A08FFF5D7B5FFFFFF
+      FFFFF2C69BFFDE6F05FFE07819FFDF771AFFDD6804FFEFB88BFFFFFFFFFFFEFB
+      F9FFFFFFFFFFF5D1B9FFDA5F0CFFDB651BFEE2651AFDDD61193C00000000FF55
+      0003FFAA000300000000E488113AE98A14FFE18515FEE07B07FFF6D7B6FFFFFF
+      FFFFF2C79CFFDE7105FFE17D1DFFDD6B04FFEBA86EFFFFFFFFFFFFFFFFFFFEFA
+      F8FFFFFFFFFFF5D3BAFFDB600CFFDB671AFEE2671AFFDB601A3A00000000FF55
+      0003FFAA000300000000E488113AEA8C13FFE18615FEE07D07FFF6D8B5FFFFFF
+      FFFFF2C89BFFDF7508FFDE7309FFE89A51FFFEFCFAFFFFFFFFFFF5D5BAFFF2C6
+      A2FFFFFFFFFFF4D1B8FFDB620CFFDC691AFEE26819FFDB651A3A00000000FF55
+      0003FFAA000300000000E488113AEA8D13FFE28815FEE07F07FFF6D8B5FFFFFF
+      FFFFF3CB9FFFDE6E00FFE5913BFFFDF6EFFFFFFFFFFFFBEEE1FFDF7217FFF0BE
+      95FFFFFFFFFFF5D1B7FFDB640BFFDC6A1AFEE36A19FFDB65153A00000000FF55
+      0003FFAA000300000000E48C113AEA8F13FFE28914FEE18007FFF6D9B5FFFFFF
+      FFFFF2C594FFE17E16FFFBEFE1FFFFFFFFFFFDF6EFFFE58D3CFFDB6500FFF2C6
+      A0FFFFFFFFFFF5D2B7FFDC660BFFDC6C1AFEE36C19FFDB69153A00000000FF55
+      0003FFAA000300000000E48C113AEB9012FFE28B14FEE18206FFF6DAB6FFFFFF
+      FFFFF3CDA1FFF6DAB9FFFFFFFFFFFEFCFAFFE89C51FFDF7209FFDE7009FFF1C4
+      9CFFFFFFFFFFF5D2B7FFDC670BFFDD6D19FEE36E18FFDB69153A00000000FF55
+      0003FFAA000300000000E491113AEB9212FFE38D14FEE18406FFF7DCB9FFFFFF
+      FFFFFEFBF8FFFFFFFFFFFFFFFFFFECAE6CFFDE7203FFE17F1DFFDE6E05FFF2C5
+      9CFFFFFFFFFFF5D3B6FFDC690BFFDD6F19FEE46F18FFDB69153A00000000FF55
+      0003FFAA000300000000E590113CEB9412FDE28E14FEE28606FFF7DCB8FFFFFF
+      FFFFFEFCF9FFFFFFFFFFF0C18AFFDF7602FFE18018FFE17E18FFDE7005FFF2C5
+      9BFFFFFFFFFFF5D3B5FFDD6B0AFFDC7019FEE47018FDDD6E153C00000000FF55
+      0003AAAA000300000000E395102EEF9812FFE49113FDE18706FDF7DEBBFFFFFD
+      FCFFFFFFFFFFF4D1A6FFE07C05FFE28216FFE18015FFE27F18FFDE7205FFF2C8
+      9FFFFFFDFCFFF5D5B8FFDC6B0AFDDF7218FDE87518FFDD6E162E00000000AA55
+      000300000000FF7F0002AAAA0003E491109CF69D16FFEA8D03FFF5D7ACFBFFFF
+      FFFEF7DEBCFFE2840EFFE28412FFE28414FFE28114FFE18118FFDF7403FFF1C0
+      8EFFFFFFFFFEF3CFACFBE47108FFF07D1BFFDC70159CAA550003FF7F00020000
+      00000000000000000000FF00000100000000E9951552E9910AD4F7A52CFFF1BB
+      6DFFE38E1CFCE2860DFFE38815FFE28513FFE28313FFE28115FFE07C10FFE184
+      23FCEFAF6FFFF39030FFE4750FD4DF79185200000000FF000001000000000000
+      0000000000000000000000000000FF7F000200000000C68D1C09E78E0676E88A
+      00ECF39511FFE28A14FEE28711FCE38613FFE28413FFE18113FCE18015FEF085
+      12FFE57504ECE2760A76C6713809000000007F7F000200000000000000000000
+      000000000000000000000000000000000000FFAA00030000000000000000E599
+      2A1EE990139BE98F12FEEF9113FFE18712FDE18513FDEE8B14FFE78513FEE683
+      159BE590331E0000000000000000FF5500030000000000000000000000000000
+      00000000000000000000000000000000000000000000FF000001BF7F00040000
+      000000000000E991113AE98F12BEEF9113FFEF8F13FFE88814BEE483113A0000
+      000000000000BF7F0004FF000001000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000FFFF
+      0001FFAA00030000000000000000EB8F1340EB8B13400000000000000000FFAA
+      0003FFFF00010000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000AA550003FF0000010000000000000000FF000001AA5500030000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000FFFFFF00FFE7FF00FF81FF00FE007F00FC003F00F0000F00E0000700C000
+      0300C0000300C0000300C0000300C0000300C0000300C0000300C0000300C000
+      0300C0000300E0000700F0000F00FC003F00FE007F00FF81FF00FFE7FF00FFFF
+      FF00
+    }
+    Visible = True
+    OnClick = TrayIconClick
+    OnMouseDown = TrayIconMouseDown
+    Left = 832
+    Top = 344
+  end
+  object PopupMenuTray: TPopupMenu
+    Images = ImageListMenuTray
+    OnPopup = PopupMenuTrayPopup
+    Left = 280
+    Top = 72
+    object MnuNexagon: TMenuItem
+      Caption = 'Nexagon'
+      OnClick = MnuNexagonClick
+      object MnuWeb2: TMenuItem
+        Caption = 'Web'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000006226262F61242269602522686226
+          262F000000000000000000000000000000000000000000000000000000000000
+          000000000000000000005F262373602624DD602624FF602624FF602624FF6026
+          24FF602624DD5F26237300000000000000000000000000000000000000000000
+          00005B24240E602724B9602624FF6027258A5F2624B3602624F25F2624F35F26
+          24AF6027258A602624FF602724B95B24240E0000000000000000000000000000
+          0000602724B9602624DC5F28233360252545602624FF5F25256E612523746026
+          24FF6226223C5F282333602624DC602724B90000000000000000000000005F26
+          2373602624FF5F28233300000000602724B2602624D555000003663333056026
+          23D8602623AD000000005F282333602624FF5F26237300000000000000006026
+          24DD6027258A0000000000000000602624E06125237400000000000000006027
+          2477602624DD00000000000000006027258A602624DD000000006226262F6026
+          24FF5D272234000000005D2E2E0B602624FF6025254500000000000000006128
+          2447602624FF661A1A0A000000005D272234602624FF6226262F602624726026
+          24FF602524AC602624AA602524BF602624FF602524B2602624AA602624AA6025
+          24B2602624FF612624BE602624AA602524AC602624FF60262472602624726026
+          24FF602524AC602624AA602524C0602624FF602523AD602624AA602624AA6026
+          24AF602624FF612624BE602624AA602524AC602624FF602624726226262F6026
+          24FF5D2722340000000060202010602624FF6124242A00000000000000005E27
+          212E602624FF5D2E2E0B000000005D272234602624FF6226262F000000006026
+          24DD6027258A00000000000000005F2624E36128244700000000000000006125
+          254C602624DE00000000000000006027258A602624DD00000000000000005F26
+          2373602624FF5F28233300000000602623B4602624AA00000000000000005F26
+          24B3602624AF000000005F282333602624FF5F26237300000000000000000000
+          0000602724B9602624DC5F2823335F262243602624FF60262350612623576026
+          24FF602525455F282333602624DC602724B90000000000000000000000000000
+          00005B24240E602724B9602624FF6027258A5F2625B3602624EA602624EA5F27
+          24B26027258A602624FF602724B95B24240E0000000000000000000000000000
+          000000000000000000005F262373602624DD602624FF602624FF602624FF6026
+          24FF602624DD5F26237300000000000000000000000000000000000000000000
+          0000000000000000000000000000000000006226262F61242269602522686226
+          262F000000000000000000000000000000000000000000000000
+        }
+        OnClick = MnuWeb2Click
+      end
+      object MnuDatabase2: TMenuItem
+        Caption = 'Database'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          00000000000000000000552A2A065F24242B6028244060282440602824406028
+          24405E2828130000000061242432552A2A060000000000000000000000000000
+          00005E27212E6025249D602624FA602624FF602624FF602624FF602624FF6026
+          24FF6026248000000000602624EF6027238A0000000000000000000000006125
+          2537602624FF612624A96127244F6329211F0000000000000000000000000000
+          0000000000000000000061262471602624FC6028222D00000000000000006025
+          24A4612524B10000000000000000000000000000000000000000000000000000
+          0000000000000000000055000003602624D25F2624CB00000000000000005F25
+          24AB602624AA0000000000000000000000000000000000000000000000000000
+          0000000000005F262493602624FF602624FF602624FF5F25253E000000005F25
+          24AB602624AA80404004602525455F25256E6025248F602623B4602724AC6026
+          24875D23231661272342602624FF5F2723836128233A00000001000000005F25
+          24AB612624D05F2624E3602624FD602624DC602724C0602724C0602724C06026
+          24BD6124242A000000005F2623A65F2624DB5500000300000000000000006026
+          23CA5F2624FB5F2724636227270D000000000000000000000000000000000000
+          00000000000000000000602A2018602624F26026246A00000000000000005F26
+          24C9602524C70000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000602525526027234800000000000000005F25
+          24AB602624AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000005F25
+          24AB602624AF602525606025249D612724C6602624E0602624F6602724F56026
+          23DF612724C66026249C6025255A602625A75F2624A300000000000000006025
+          24BA602524F7602624EF602623AD602624856026246A5F25254B5F27244E6026
+          246A60262485612524B1602624F2602524F7602524B900000000000000006026
+          24D7602624F15B24240E00000000000000000000000000000000000000000000
+          0000000000000000000060202010602624F4602624D900000000000000006126
+          235F612624F86125257C6024243860262628602A201880404004602020085C29
+          29195D2525295E24243961272584602523FC6024247000000000000000000000
+          000061252537602625A0602624DD602624FF602624FF602624FF602624FF6026
+          24FF602624FF602624DC6026249A612424320000000000000000000000000000
+          0000000000000000000000000000552A2A06602828205E262636602622356329
+          211F552A2A060000000000000000000000000000000000000000
+        }
+        OnClick = MnuDatabase2Click
+      end
+      object MnuShell2: TMenuItem
+        Caption = 'Terminal  (CTRL+ALT+T)'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00006127257C602624AA602624AA602624AA602624AA602624AA602624AA6026
+          24AA602624AA602624AA602624AA6127257C0000000000000000000000006127
+          257C602624FF602624AA602624AA602624AA602624AA602624AA602624AA6026
+          24AA602624AA602624AA602624AA602624FF6127257C00000000000000006026
+          24AA602624AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000000000000000000000000000060272455602724556027
+          2455612424320000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000000000000000000005E262351602624FF602624FF6026
+          24FF5F2624A30000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA00000000602624E25F2523660000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000060272462602624E26126246400000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000060262485602624FF5F27246300000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA00000000602624D5612525670000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006026
+          24AA602624AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000602624AA602624AA00000000000000006127
+          257C602624FF602624AA602624AA602624AA602624AA602624AA602624AA6026
+          24AA602624AA602624AA602624AA602624FF6127257C00000000000000000000
+          00006127257C602624AA602624AA602624AA602624AA602624AA602624AA6026
+          24AA602624AA602624AA602624AA6127257C0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = MnuShell2Click
+      end
+      object MnuRoot2: TMenuItem
+        Caption = 'Root'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000006127
+          2391602624EF602624FF602624FF602624FF602624FF602624FF602624FF6026
+          24FF602624FF602624FF602624FF602624EF6025248F000000006124242A6026
+          24FF612624646028244060282440602824406028244060282440602824406028
+          24406028244060282440602824405F252366602624FF622727275F2724566026
+          24FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000602624FF602724555F2724566026
+          24FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000602624FF602724555F2724566026
+          24FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000602624FF602724555F2724566026
+          24FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000602624FF602724555F2724566026
+          24FF602724556027245560272455602724556027245560272455602724556027
+          245560272455602724556027245560272455602624FF602724555F26238C6026
+          24FF602624FF602624FF602624FF602624FF602624FF602624FF602624FF6026
+          24FF602624FF602624FF602624FF602624FF602624FF5F27238B602724556026
+          24FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000066333305602624FF5E262351602724556026
+          24FF000000000000000000000000000000005E2828136026249A602724C06027
+          24C0602724C0602724C0602724C0602524DA602624FF612424155E2623516026
+          24FF80404004000000000000000080404004612724C6602624E7602724C06027
+          24C0602724C0602724C0602724C0602624AF6127245400000000602A20186026
+          24FF602524DA602724C0602724C0602624DC602624F45D252529000000000000
+          0000000000000000000000000000000000000000000000000000000000006027
+          2455602624AF602724C0602724C0612524B16226223C00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = MnuRoot2Click
+      end
+      object N38: TMenuItem
+        Caption = '-'
+      end
+      object MnuNexagonDirProc: TMenuItem
+        Caption = 'dir: proc'
+      end
+      object MnuNexagonProcfile: TMenuItem
+        Caption = 'Procfile'
+      end
+      object N28: TMenuItem
+        Caption = '-'
+      end
+      object MenuNexagonDirUser: TMenuItem
+        Caption = 'dir: usr'
+        OnClick = MenuNexagonDirUserClick
+      end
+      object MnuUserProfileCmd: TMenuItem
+        Caption = 'Startup file: user-profile.cmd'
+        OnClick = MnuUserProfileCmdClick
+      end
+      object N30: TMenuItem
+        Caption = '-'
+      end
+      object MnuNexagonIni: TMenuItem
+        Caption = 'Setting file: nexagon.ini'
+        OnClick = MnuNexagonIniClick
+      end
+      object N35: TMenuItem
+        Caption = '-'
+      end
+      object MnuNexagonLog: TMenuItem
+        Caption = 'nexagon.log'
+        OnClick = MnuNexagonLogClick
+      end
+    end
+    object MnuWWW: TMenuItem
+      Caption = 'www'
+      ImageIndex = 15
+      OnClick = MnuWWWClick
+      object MnuWWWEmpty: TMenuItem
+        Caption = 'localhost'
+        Enabled = False
+      end
+    end
+    object MnuShare: TMenuItem
+      Caption = 'Ngrok'
+      Visible = False
+      OnClick = MnuShareClick
+      object MnuShareEmpty: TMenuItem
+      end
+    end
+    object MnuQuickApp: TMenuItem
+      Caption = 'Quick app'
+      OnClick = MnuQuickAppClick
+      object MnuSiteTemplate: TMenuItem
+      end
+    end
+    object MnuQuickCloudServer: TMenuItem
+      Caption = 'Deploy to Cloud'
+      Visible = False
+      OnClick = MnuQuickCloudServerClick
+      object PHP1: TMenuItem
+        Caption = 'PHP'
+      end
+      object Wordpress1: TMenuItem
+        Caption = 'Wordpress'
+      end
+      object Laravel1: TMenuItem
+        Caption = 'Laravel'
+      end
+      object N46: TMenuItem
+        Caption = '-'
+      end
+      object Python1: TMenuItem
+        Caption = 'Python'
+      end
+      object Ruby1: TMenuItem
+        Caption = 'Ruby'
+      end
+      object Nodejs1: TMenuItem
+        Caption = 'Node.js'
+      end
+      object Go1: TMenuItem
+        Caption = 'Go'
+      end
+      object Java1: TMenuItem
+        Caption = 'Java'
+      end
+      object N45: TMenuItem
+        Caption = '-'
+      end
+      object Docker1: TMenuItem
+        Caption = 'Docker'
+      end
+      object Kubernetes1: TMenuItem
+        Caption = 'Kubernetes'
+      end
+      object N47: TMenuItem
+        Caption = '-'
+      end
+      object MnuQuickCSCreate: TMenuItem
+        Caption = 'Quick Linux server'
+      end
+      object MnuQuickCSSSH: TMenuItem
+        Caption = 'SSH'
+        Visible = False
+        OnClick = MnuQuickCSSSHClick
+      end
+      object MnuQuickCSRegion: TMenuItem
+        Caption = 'Region [eu]'
+        Visible = False
+        object MnuQuickCSRegionAS: TMenuItem
+          Caption = 'as - Asia'
+          OnClick = MnuQuickCSRegionASClick
+        end
+        object MnuQuickCSRegionEU: TMenuItem
+          Caption = 'eu - EU'
+          OnClick = MnuQuickCSRegionEUClick
+        end
+        object MnuQuickCSRegionUS: TMenuItem
+          Caption = 'us - US'
+          OnClick = MnuQuickCSRegionUSClick
+        end
+      end
+    end
+    object MnuTools: TMenuItem
+      Caption = 'Tools'
+      OnClick = MnuToolsClick
+      object MnuSublimeText: TMenuItem
+        Caption = 'Sublime Text'
+        OnClick = MnuSublimeTextClick
+      end
+      object MnuNotepadPlusPlus: TMenuItem
+        Caption = 'Notepad++'
+        OnClick = MnuNotepadPlusPlusClick
+      end
+      object N25: TMenuItem
+        Caption = '-'
+      end
+      object MnuWinSCP: TMenuItem
+        Caption = 'WinSCP'
+        OnClick = MnuWinSCPClick
+      end
+      object MnuNetStat: TMenuItem
+        Caption = 'netstat'
+        OnClick = MnuNetStatClick
+      end
+      object MnuSSL: TMenuItem
+        Caption = 'SSL'
+        object Generatecertsandaddtotruststore1: TMenuItem
+          Caption = 'Generate certs and add to trust store'
+        end
+        object N42: TMenuItem
+          Caption = '-'
+        end
+        object opensslconftpl1: TMenuItem
+          Caption = 'openssl.conf.tpl'
+        end
+      end
+      object MnuSepWinScp: TMenuItem
+        Caption = '-'
+      end
+      object Mnuputty: TMenuItem
+        Caption = 'PuTTY'
+        OnClick = MnuputtyClick
+      end
+      object MnuPuTTYgen: TMenuItem
+        Caption = 'PuTTYgen'
+        OnClick = MnuPuTTYgenClick
+      end
+      object MnuSepPutty: TMenuItem
+        Caption = '-'
+      end
+      object MnuRightClickMenu: TMenuItem
+        Caption = 'Right-Click Menu'
+        Visible = False
+        object MnuAddSublimeTextTerminal: TMenuItem
+          Caption = 'Add/Update Sublime Text && Terminal'
+          OnClick = MnuAddSublimeTextTerminalClick
+        end
+        object MnuRemoveSublimeTextTerminal: TMenuItem
+          Caption = 'Remove Sublime Text && Terminal'
+          OnClick = MnuRemoveSublimeTextTerminalClick
+        end
+      end
+      object MnuPathVariables: TMenuItem
+        Caption = 'Path'
+        object MnuAddNexagontoPath: TMenuItem
+          Caption = 'Add Nexagon to Path'
+          OnClick = MnuAddNexagontoPathClick
+        end
+        object MnuRemoveNexagonfromPath: TMenuItem
+          Caption = 'Remove Nexagon from Path'
+          OnClick = MnuRemoveNexagonfromPathClick
+        end
+        object N31: TMenuItem
+          Caption = '-'
+        end
+        object MnuManagePath: TMenuItem
+          Caption = 'Manage Path'
+          OnClick = MnuManagePathClick
+        end
+      end
+      object MnuEditHostsFile: TMenuItem
+        Caption = 'Edit drivers\etc\hosts'
+        OnClick = MnuEditHostsFileClick
+      end
+      object N21: TMenuItem
+        Caption = '-'
+        Visible = False
+      end
+      object MnuTransferFiles: TMenuItem
+        Caption = 'WildcardDNS'
+        Visible = False
+      end
+    end
+    object N3: TMenuItem
+      Caption = '-'
+    end
+    object MnuApache: TMenuItem
+      Caption = 'Apache'
+      object MnuStartApache: TMenuItem
+        Caption = 'Start Apache'
+        ImageIndex = 1
+        OnClick = MnuStartApacheClick
+      end
+      object MnuReloadApache: TMenuItem
+        Caption = 'Reload'
+        Enabled = False
+        OnClick = MnuReloadApacheClick
+      end
+      object MnuApacheVersion: TMenuItem
+        Caption = 'Version [2.4.10]'
+        OnClick = MnuApacheVersionClick
+        object apache24102: TMenuItem
+          Caption = 'apache-2.4.9'
+        end
+      end
+      object MnuRunApacheasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N6: TMenuItem
+        Caption = '-'
+      end
+      object MnuApacheConfigFile: TMenuItem
+        Caption = 'httpd.conf'
+        OnClick = MnuApacheConfigFileClick
+      end
+      object MnuApacheVirtualHost: TMenuItem
+        Caption = 'sites-enabled'
+        OnClick = MnuApacheVirtualHostClick
+        object MnuVirtualHostFile: TMenuItem
+        end
+      end
+      object MnuApacheSSL: TMenuItem
+        Caption = 'SSL'
+        OnClick = MnuApacheSSLClick
+        object MnuApacheSSLEnabled: TMenuItem
+          Caption = 'Enabled'
+          OnClick = MnuApacheSSLEnabledClick
+        end
+        object N27: TMenuItem
+          Caption = '-'
+        end
+        object MnuApacheAddCertificatesToTrustStore: TMenuItem
+          Caption = 'Add nexagon.crt to Trust Store'
+          OnClick = MnuApacheAddCertificatesToTrustStoreClick
+        end
+        object MnuApacheCertificateManager: TMenuItem
+          Caption = 'Certificate Manager'
+          OnClick = MnuApacheCertificateManagerClick
+        end
+        object N43: TMenuItem
+          Caption = '-'
+        end
+        object MnuApacheHttpdSSLConf: TMenuItem
+          Caption = 'httpd-ssl.conf'
+          OnClick = MnuApacheHttpdSSLConfClick
+        end
+      end
+      object MnuApacheErrorLog: TMenuItem
+        Caption = 'error.log'
+        OnClick = MnuApacheErrorLogClick
+      end
+      object MnuApacheAccessLog: TMenuItem
+        Caption = 'access.log'
+        OnClick = MnuApacheAccessLogClick
+      end
+      object N15: TMenuItem
+        Caption = '-'
+      end
+      object MnuApacheConfDir: TMenuItem
+        Caption = 'dir: conf'
+        OnClick = MnuApacheConfDirClick
+      end
+      object MnuApacheAlias: TMenuItem
+        Caption = 'dir: alias'
+        OnClick = MnuApacheAliasClick
+      end
+    end
+    object MnuNginx: TMenuItem
+      Caption = 'Nginx'
+      object MnuStartNginx: TMenuItem
+        Caption = 'Start Nginx'
+        ImageIndex = 1
+        OnClick = MnuStartNginxClick
+      end
+      object MnuReloadNginx: TMenuItem
+        Caption = 'Reload'
+        OnClick = MnuReloadNginxClick
+      end
+      object MnuNginxVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuNginxVersionClick
+        object N1961: TMenuItem
+          Caption = '1.9.6'
+        end
+      end
+      object MnuRunNginxasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object MnuNginxConf: TMenuItem
+        Caption = 'nginx.conf'
+        OnClick = MnuNginxConfClick
+      end
+      object MnuNginxServer: TMenuItem
+        Caption = 'sites-enabled'
+        OnClick = MnuNginxServerClick
+        object MnuNginxServerFile: TMenuItem
+        end
+      end
+      object MnuNginxSSL: TMenuItem
+        Caption = 'SSL'
+        OnClick = MnuNginxSSLClick
+        object MnuNginxSSLEnabled: TMenuItem
+          Caption = 'Enabled'
+          OnClick = MnuNginxSSLEnabledClick
+        end
+        object N44: TMenuItem
+          Caption = '-'
+        end
+        object MnuNginxAddCertificatesToTrustStore: TMenuItem
+          Caption = 'Add nexagon.crt to Trust Store'
+          OnClick = MnuNginxAddCertificatesToTrustStoreClick
+        end
+        object MnuNginxCertificateManager: TMenuItem
+          Caption = 'Certificate Manager'
+          OnClick = MnuNginxCertificateManagerClick
+        end
+      end
+      object N19: TMenuItem
+        Caption = '-'
+      end
+      object MnuNginxErrorLog: TMenuItem
+        Caption = 'error.log'
+        OnClick = MnuNginxErrorLogClick
+      end
+      object MnuNginxAccessLog: TMenuItem
+        Caption = 'access.log'
+        OnClick = MnuNginxAccessLogClick
+      end
+      object N20: TMenuItem
+        Caption = '-'
+      end
+      object MnuNginxConfDir: TMenuItem
+        Caption = 'dir: conf'
+        OnClick = MnuNginxConfDirClick
+      end
+      object MnuNginxAlias: TMenuItem
+        Caption = 'dir: alias'
+        OnClick = MnuNginxAliasClick
+      end
+    end
+    object MnuJava: TMenuItem
+      Caption = 'Java'
+      OnClick = MnuJavaClick
+      object MnuJavaVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuJavaVersionClick
+        object MnuJavaPlaceHolder: TMenuItem
+        end
+      end
+      object N36: TMenuItem
+        Caption = '-'
+      end
+      object MnuJavaSTS: TMenuItem
+        Caption = 'STS'
+        OnClick = MnuJavaSTSClick
+      end
+      object MnuJavaEclipse: TMenuItem
+        Caption = 'Eclipse'
+        OnClick = MnuJavaEclipseClick
+      end
+    end
+    object MnuMySQL: TMenuItem
+      Caption = 'MySQL'
+      OnClick = MnuMySQLClick
+      object MnuMySQLPHPMyAdmin6: TMenuItem
+        Caption = 'phpMyAdmin6'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000DFD7D791DFD7
+          D88D0000000000000000FCFCFD22D5CACBA0EFEBEC5600000000F9F8F934D3C8
+          C99FEAE5E699D0C4C5A1FCFCFD3400000000E3DCDC89DDD5D693AF9A9AD78160
+          60FFFFFFFF42FFFFFF12FFFFFF1A856565FFB8A6A6CCEDE9E970E9E3E4A67652
+          52FFC7B8B9EC866767FFA68E8FE0CABCBCAA805E5EFFA48D8DE8E2D5D3866B44
+          44FF8B6D6DFF937777F6DCD2D39AB29E9FCF957979FE937778FF8A6B6BFF9073
+          73FFAD9898C8E6E0E091643A3AFFA28A8AFF755050FFBFAFAFB6C2DBF557754F
+          4FFFC9BBBCC3C4B5B5C0714A4AFFCEBCB9EA724C4CFF876665FDB49995EE6C45
+          44FF876969F6FFFFFF2DBA9F9ACA917373FD7D5B5CFFD3C8C98F61B7FF408C76
+          7AFF8E645DF597736EF7816466FF9EC1E4EE7F534DFF886D6FF79FD7FF90987B
+          7AEE824E42FF9EC3EA748BC8FB5C856361FF6F4441FFF6EAE66B5EB2FF0682B9
+          F0D77AA8DAFF90B4DDC396C9FB7139A1FFFF71ABE6FF60A6ECFF2096FFB8B1D5
+          F93B6AA3DEDF1F8EF7FF007CFFFB92C1F184CFD5E0688DC1F42E000000005DB2
+          FF8654AFFFFF4EACFFA8000000003FA2FFAC329FFFFF2B9BFFFF2A97FFC90000
+          0000128FFFBA0E8AFFFF0A87FFA7108DFF1D0B89FF980076F1870000000068B5
+          FF3363B3FFFF5BAFFFC10000000047A6FF2843A3FFF73AA0FFFF339CFFD40000
+          00002194FFC01B90FFFC138CFFAA0887FFF60083FFF50083FD1A000000006DB9
+          FF036AB7FFD962B3FFD6000000000000000049A7FF9A42A4FFFF3BA0FFDF339C
+          FF0A2A98FFCB2295FFFF1A91FFFF128CFFFF0B89FF6300000000000000000000
+          000071BAFF846BB7FFE969B6FF06000000004FA9FF284BA8FFFB43A4FFEB3BA0
+          FF22329CFFD92A98FFFA2294FFFF1A90FFC3188FFF0200000000000000000000
+          000078BDFF3073BBFFE470BAFF10000000000000000052ACFFAF4AA7FFFA42A4
+          FF563AA0FF81329CFFE72A98FFFB2595FF310000000000000000000000000000
+          00007DC0FF037ABFFFB577BCFF20000000000000000058AEFF4753ACFFFF4AA7
+          FF4441A3FF203BA0FFFE339CFF91000000000000000000000000000000000000
+          00000000000081C2FF6A7FC1FF3300000000000000005DB0FF065AAFFFD954AC
+          FF3349A6FF2A42A3FFE03FA2FF11000000000000000000000000000000000000
+          00000000000086C4FF0D84C3FF0E00000000000000000000000061B3FF8D5CB0
+          FF4851ABFF5A4CA8FF6200000000000000000000000000000000000000000000
+          000000000000000000000000000000000000000000000000000068B5FF4263B4
+          FF585AAFFF3458AEFF0600000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000006DB9FF106BB7
+          FF2C000000000000000000000000000000000000000000000000
+        }
+        OnClick = MnuMySQLPHPMyAdmin6Click
+      end
+      object MnuMySQLphpMyAdmin: TMenuItem
+        Caption = 'phpMyAdmin'
+        ImageIndex = 17
+        OnClick = MnuMySQLphpMyAdminClick
+      end
+      object MnuMySQLDBeaver: TMenuItem
+        Caption = 'DBeaver'
+        ImageIndex = 24
+        OnClick = MnuMySQLDBeaverClick
+      end
+      object MnuMySQLHeidiSQL: TMenuItem
+        Caption = 'HeidiSQL'
+        ImageIndex = 18
+        OnClick = MnuMySQLHeidiSQLClick
+      end
+      object N48: TMenuItem
+        Caption = '-'
+      end
+      object MnuStartMySQL: TMenuItem
+        Caption = 'Start MySQL'
+        ImageIndex = 1
+        OnClick = MnuStartMySQLClick
+      end
+      object MnuMySQLVersion: TMenuItem
+        Caption = 'Version (MySQL 5.7.12)'
+        OnClick = MnuMySQLVersionClick
+        object MnuMySQLDir: TMenuItem
+        end
+      end
+      object MnuRunMySQLasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N7: TMenuItem
+        Caption = '-'
+      end
+      object MnuMySQLCreateDatabase: TMenuItem
+        Caption = 'Create database'
+        ImageIndex = 21
+        RadioItem = True
+        OnClick = MnuMySQLCreateDatabaseClick
+      end
+      object MnuMySQLChangeRootPassword: TMenuItem
+        Caption = 'Change root''s password'
+        OnClick = MnuMySQLChangeRootPasswordClick
+      end
+      object MnuMySQLGetRootPassword: TMenuItem
+        Caption = 'Get root''s password'
+        ImageIndex = 23
+        OnClick = MnuMySQLGetRootPasswordClick
+      end
+      object MnuMySQLBackupAllDatabases: TMenuItem
+        Caption = 'Backup all databases'
+        ImageIndex = 22
+        OnClick = MnuMySQLBackupAllDatabasesClick
+      end
+      object N29: TMenuItem
+        Caption = '-'
+        Visible = False
+      end
+      object MnuMySQLResetRootPassword: TMenuItem
+        Caption = 'Reset and generate a random password for root'
+        Visible = False
+        OnClick = MnuMySQLResetRootPasswordClick
+      end
+      object N14: TMenuItem
+        Caption = '-'
+        Visible = False
+      end
+      object MnuMySQLConfigFile: TMenuItem
+        Caption = 'my.ini'
+        OnClick = MnuMySQLConfigFileClick
+      end
+      object MnuMySQLErrorLog: TMenuItem
+        Caption = 'mysqld.log'
+        OnClick = MnuMySQLErrorLogClick
+      end
+      object MnuMySQLDataDir: TMenuItem
+        Caption = 'dir: data'
+        OnClick = MnuMySQLDataDirClick
+      end
+      object MnuMySQLBackupDir: TMenuItem
+        Caption = 'dir:backup'
+        ImageIndex = 14
+        OnClick = MnuMySQLBackupDirClick
+      end
+      object N16: TMenuItem
+        Caption = '-'
+      end
+    end
+    object MnuPostgreSQL: TMenuItem
+      Caption = 'PostgreSQL'
+      object MnuPostgresqlDbeaver: TMenuItem
+        Caption = 'Dbeaver'
+        ImageIndex = 24
+        OnClick = MnuMySQLDBeaverClick
+      end
+      object MnuPostgreSQLHeidiSQL: TMenuItem
+        Caption = 'HeidiSQL'
+        ImageIndex = 18
+        OnClick = MnuMySQLHeidiSQLClick
+      end
+      object MnuPostgreSQLPgAdmin4: TMenuItem
+        Caption = 'pgAdmin 4'
+        OnClick = MnuPostgreSQLPgAdmin4Click
+      end
+      object MnuPostgreSQLPgAdmin: TMenuItem
+        Caption = 'pgAdmin'
+        OnClick = MnuPostgreSQLPgAdminClick
+      end
+      object mnuStartPostgreSQL: TMenuItem
+        Caption = 'Start PostgreSQL'
+        ImageIndex = 1
+        OnClick = mnuStartPostgreSQLClick
+      end
+      object MnuPostgreSQLVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuPostgreSQLVersionClick
+        object MnuPostgreSQLDir: TMenuItem
+        end
+      end
+      object MnuRunPostgreSQLasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N33: TMenuItem
+        Caption = '-'
+      end
+      object postgresqlconf1: TMenuItem
+        Caption = 'postgresql.conf'
+        OnClick = postgresqlconf1Click
+      end
+      object postgresqllog1: TMenuItem
+        Caption = 'postgresql.log'
+        OnClick = postgresqllog1Click
+      end
+      object N34: TMenuItem
+        Caption = '-'
+      end
+      object MnuPostgreSQLDataDir: TMenuItem
+        Caption = 'dir:data'
+        OnClick = MnuPostgreSQLDataDirClick
+      end
+    end
+    object MnuMongoDB: TMenuItem
+      Caption = 'MongoDB'
+      object MnuRoboMongo: TMenuItem
+        Caption = 'Robomongo'
+        OnClick = MnuRoboMongoClick
+      end
+      object MnuStartMongoDB: TMenuItem
+        Caption = 'Start MongoDB'
+        ImageIndex = 1
+        OnClick = MnuStartMongoDBClick
+      end
+      object MnuMongoDBVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuMongoDBVersionClick
+        object MnuMongoDBDir: TMenuItem
+        end
+      end
+      object MnuRunMongoDBasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N32: TMenuItem
+        Caption = '-'
+      end
+      object MnuMongoDBConfigFile: TMenuItem
+        Caption = 'mongod.conf'
+        OnClick = MnuMongoDBConfigFileClick
+      end
+      object MnuMongoDBLog: TMenuItem
+        Caption = 'mongod.log'
+        OnClick = MnuMongoDBLogClick
+      end
+      object N26: TMenuItem
+        Caption = '-'
+      end
+      object MnuMongoDBDataDir: TMenuItem
+        Caption = 'dir:data'
+        OnClick = MnuMongoDBDataDirClick
+      end
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object MnuMailpit: TMenuItem
+      Caption = 'Mailpit'
+      ImageIndex = 10
+      object MnuStartMailpit: TMenuItem
+        Caption = 'Start Mailpit'
+        ImageIndex = 1
+        OnClick = MnuStartMailpitClick
+      end
+      object Separator2: TMenuItem
+        Caption = '-'
+      end
+      object MnuMailpitWebUI: TMenuItem
+        Caption = 'Web UI'
+        ImageIndex = 19
+        OnClick = MnuMailpitWebUIClick
+      end
+    end
+    object N18: TMenuItem
+      Caption = '-'
+    end
+    object MnuGo: TMenuItem
+      Caption = 'Go'
+      object MnuGoVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuGoVersionClick
+        object N40: TMenuItem
+          Caption = ' '
+        end
+      end
+      object N39: TMenuItem
+        Caption = '-'
+      end
+      object MnuGoLiteIDE: TMenuItem
+        Caption = 'LiteIDE'
+        Visible = False
+        OnClick = MnuGoLiteIDEClick
+      end
+      object N41: TMenuItem
+        Caption = '-'
+      end
+      object MnuGoGOPATH: TMenuItem
+        Caption = 'GOPATH'
+        OnClick = MnuGoGOPATHClick
+      end
+      object MnuGoGOROOT: TMenuItem
+        Caption = 'GOROOT'
+        OnClick = MnuGoGOROOTClick
+      end
+    end
+    object MnuNodeJS: TMenuItem
+      Caption = 'Node.js'
+      object MnuNodeJsVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuNodeJsVersionClick
+        object MnuNodeJSDir: TMenuItem
+        end
+      end
+    end
+    object MnuPHP: TMenuItem
+      Caption = 'PHP'
+      object MnuStartPHPServer: TMenuItem
+        Caption = 'Start PHP Server'
+        ImageIndex = 1
+        Visible = False
+        OnClick = MnuStartPHPServerClick
+      end
+      object MnuPHPVersion: TMenuItem
+        Caption = 'Version [7.0.0RC2]'
+        OnClick = MnuPHPVersionClick
+        object MnuPHPDir: TMenuItem
+        end
+      end
+      object N9: TMenuItem
+        Caption = '-'
+        Visible = False
+      end
+      object MnuPHPQuickSettings: TMenuItem
+        Caption = 'Quick settings'
+        ImageIndex = 5
+        OnClick = MnuPHPQuickSettingsClick
+        object maxexecutiontime1: TMenuItem
+          Caption = 'max_execution_time = 0'
+        end
+        object xdebug1: TMenuItem
+          Caption = 'xdebug'
+        end
+        object uploadmaxfilesize2G1: TMenuItem
+          Caption = 'upload_max_filesize = 2G'
+        end
+        object memorylimit512M1: TMenuItem
+          Caption = 'memory_limit = 512M'
+        end
+      end
+      object MnuPHPExtensions: TMenuItem
+        Caption = 'Extensions'
+        OnClick = MnuPHPExtensionsClick
+        object MnuPHPExtensionFile: TMenuItem
+        end
+      end
+      object MnuPHPConfigFile: TMenuItem
+        Caption = 'php.ini'
+        OnClick = MnuPHPConfigFileClick
+      end
+      object MnuPHPExtensionsDir: TMenuItem
+        Caption = 'dir: ext'
+        OnClick = MnuPHPExtensionsDirClick
+      end
+      object N17: TMenuItem
+        Caption = '-'
+      end
+      object MnuMailCatcher: TMenuItem
+        Caption = 'Mail Catcher'
+        OnClick = MnuMailCatcherClick
+        object MnuMailCatcherEnable: TMenuItem
+          Caption = 'Enabled'
+          OnClick = MnuMailCatcherEnableClick
+        end
+        object N12: TMenuItem
+          Caption = '-'
+        end
+        object MnuViewemail: TMenuItem
+          Caption = 'View latest email'
+          OnClick = MnuViewemailClick
+        end
+        object MnuOpenmaildir: TMenuItem
+          Caption = 'Open Mail Dir'
+          OnClick = MnuOpenmaildirClick
+        end
+        object N10: TMenuItem
+          Caption = '-'
+        end
+        object MnuSendmailPathClipboard: TMenuItem
+          Caption = 'Get sendmail_path'
+          OnClick = MnuSendmailPathClipboardClick
+        end
+        object N23: TMenuItem
+          Caption = '-'
+        end
+        object MnuMailCatcherConfiguration: TMenuItem
+          Caption = 'Configuration...'
+          OnClick = MnuMailCatcherConfigurationClick
+        end
+      end
+      object MnuMailSender: TMenuItem
+        Caption = 'Mail Sender'
+        OnClick = MnuMailSenderClick
+        object MnuMailSenderEnable: TMenuItem
+          Caption = 'Enabled'
+          OnClick = MnuMailSenderEnableClick
+        end
+        object N13: TMenuItem
+          Caption = '-'
+        end
+        object MnuMailSenderDebugLog: TMenuItem
+          Caption = 'debug.log'
+          OnClick = MnuMailSenderDebugLogClick
+        end
+        object MnuMailSenderErrorLog: TMenuItem
+          Caption = 'error.log'
+          OnClick = MnuMailSenderErrorLogClick
+        end
+        object N24: TMenuItem
+          Caption = '-'
+        end
+        object MnuMailSenderConfiguration: TMenuItem
+          Caption = 'Configuration...'
+          OnClick = MnuMailSenderConfigurationClick
+        end
+      end
+      object N8: TMenuItem
+        Caption = '-'
+      end
+      object MnuPHPErrorLog: TMenuItem
+        Caption = 'php_errors.log'
+        OnClick = MnuPHPErrorLogClick
+      end
+    end
+    object MnuPython: TMenuItem
+      Caption = 'Python'
+      object MnuPythonVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuPythonVersionClick
+        object MnuPythonDir: TMenuItem
+        end
+      end
+      object N37: TMenuItem
+        Caption = '-'
+      end
+      object MnuPythonIDLE: TMenuItem
+        Caption = 'IDLE (Python GUI)'
+        Visible = False
+        OnClick = MnuPythonIDLEClick
+      end
+      object MnuPythonHelp: TMenuItem
+        Caption = 'Python Help'
+        Visible = False
+        OnClick = MnuPythonHelpClick
+      end
+    end
+    object MnuRuby: TMenuItem
+      Caption = 'Ruby'
+      object MnuRubyVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuRubyVersionClick
+        object MnuRubySubDir: TMenuItem
+        end
+      end
+    end
+    object MnuLaravel: TMenuItem
+      Caption = 'Laravel'
+      OnClick = MnuLaravelClick
+      object MnuLaravelCurrentProject: TMenuItem
+        Caption = 'Nexagon [4]'
+        OnClick = MnuLaravelCurrentProjectClick
+      end
+      object MnuLaravelRouteFile: TMenuItem
+        Caption = 'routes.php'
+        ImageIndex = 3
+        OnClick = MnuLaravelRouteFileClick
+      end
+      object MnuLaravelConfigDir: TMenuItem
+        Caption = 'dir: config'
+        OnClick = MnuLaravelConfigDirClick
+      end
+      object MnuLaravelControllersDir: TMenuItem
+        Caption = 'dir: controller'
+        OnClick = MnuLaravelControllersDirClick
+      end
+      object MnuLaravelLogsDir: TMenuItem
+        Caption = 'dir: logs'
+        OnClick = MnuLaravelLogsDirClick
+      end
+      object MnuLaravelPublicDir: TMenuItem
+        Caption = 'dir: public'
+        OnClick = MnuLaravelPublicDirClick
+      end
+      object N11: TMenuItem
+        Caption = '-'
+      end
+      object MnuLaravelCreateProject: TMenuItem
+        Caption = 'Create project'
+        object MnuCreateLumen: TMenuItem
+          Caption = 'Lumen'
+          OnClick = MnuCreateLumenClick
+        end
+        object N22: TMenuItem
+          Caption = '-'
+        end
+        object MnuCreateLaravel5: TMenuItem
+          Caption = 'Laravel 5'
+          OnClick = MnuCreateLaravel5Click
+        end
+        object N2: TMenuItem
+          Caption = '-'
+        end
+        object MnuCreateLaravel4: TMenuItem
+          Caption = 'Laravel 4'
+          OnClick = MnuCreateLaravel4Click
+        end
+      end
+      object MnuLaravelSwitchProject: TMenuItem
+        Caption = 'Switch project'
+        object MnuNoProject: TMenuItem
+          Caption = 'No Project'
+          Enabled = False
+        end
+      end
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object MnuMemcached: TMenuItem
+      Caption = 'Memcached'
+      object MnuStartMemcached: TMenuItem
+        Caption = 'Start Memcached'
+        ImageIndex = 1
+        OnClick = MnuStartMemcachedClick
+      end
+      object MnuMemcachedVersion: TMenuItem
+        Caption = 'Version'
+        OnClick = MnuMemcachedVersionClick
+        object MnuMemcachedDir: TMenuItem
+        end
+      end
+      object MnuRunMemcachedasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N01: TMenuItem
+        Caption = '-'
+      end
+      object MnuMemcachedAdmin: TMenuItem
+        Caption = 'Web admin (login: mem/1)'
+        ImageIndex = 11
+        OnClick = MnuMemcachedAdminClick
+      end
+    end
+    object MnuRedis: TMenuItem
+      Caption = 'Redis'
+      object MnuStartRedis: TMenuItem
+        Caption = 'Start Redis'
+        ImageIndex = 1
+        OnClick = MnuStartRedisClick
+      end
+      object MnuRedisVersion: TMenuItem
+        Caption = 'Version (Redis 5.x)'
+        OnClick = MnuRedisVersionClick
+        object MnuRedisDir: TMenuItem
+        end
+      end
+      object MnuRunRedisasWindowsService: TMenuItem
+        Caption = 'Run as Windows Service'
+        Visible = False
+        OnClick = MnuRunApacheasWindowsServiceClick
+      end
+      object N02: TMenuItem
+        Caption = '-'
+      end
+      object MnuRedisAdmin: TMenuItem
+        Caption = 'Web admin'
+        ImageIndex = 11
+        OnClick = MnuRedisAdminClick
+      end
+      object MnuRedisCli: TMenuItem
+        Caption = 'redis-cli'
+        OnClick = MnuRedisCliClick
+      end
+      object MnuRedisConfigFile: TMenuItem
+        Caption = 'redis.conf'
+        OnClick = MnuRedisConfigFileClick
+      end
+    end
+    object MnuSep: TMenuItem
+      Caption = '-'
+    end
+    object MnuStartAll: TMenuItem
+      Caption = 'Start All'
+      ImageIndex = 1
+      OnClick = MnuStartAllClick
+    end
+    object N4: TMenuItem
+      Caption = '-'
+    end
+    object MnuProfile: TMenuItem
+      Caption = 'Profile'
+      OnClick = MnuProfileClick
+      object default1: TMenuItem
+        Caption = 'default'
+      end
+      object PHP841: TMenuItem
+        Caption = 'PHP 8.4'
+      end
+      object MySQL941: TMenuItem
+        Caption = 'MySQL 9.4'
+      end
+      object N49: TMenuItem
+        Caption = '-'
+      end
+      object Addprofile1: TMenuItem
+        Caption = 'Add profile'
+      end
+    end
+    object MnuPreferences: TMenuItem
+      Caption = 'Preferences...'
+      Bitmap.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000018000000180000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000004700000085000000850000
+        0048000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000003000000820000000C0000000C0000
+        0082000000030000000000000000000000000000000000000000000000000000
+        000000000034000000520000003B000000630000007100000000000000000000
+        0071000000640000003A00000052000000340000000000000000000000000000
+        002C0000008000000059000000640000005F0000001C00000000000000000000
+        001C00000060000000630000005A0000007E0000002B00000000000000000000
+        004C0000006B0000000000000000000000000000000000000048000000480000
+        00000000000000000000000000000000006A0000004A00000000000000000000
+        002300000082000000370000000000000000000000AD0000006A0000006A0000
+        00AD000000000000000000000036000000820000002400000000000000000000
+        0000000000320000007600000000000000480000006A00000000000000000000
+        006A000000480000000000000076000000310000000000000000000000000000
+        0000000000330000007600000000000000480000006A00000000000000000000
+        006A000000480000000000000076000000320000000000000000000000000000
+        002200000081000000370000000000000000000000AD0000006A0000006A0000
+        00AD000000000000000000000037000000820000002300000000000000000000
+        004B0000006B0000000000000000000000000000000000000048000000480000
+        00000000000000000000000000000000006B0000004C00000000000000000000
+        002C0000007E0000005A00000063000000600000001C00000000000000000000
+        001C0000005F0000006400000059000000800000002C00000000000000000000
+        000000000034000000520000003A000000640000007100000000000000000000
+        0071000000630000003B00000052000000340000000000000000000000000000
+        000000000000000000000000000000000003000000820000000C0000000C0000
+        0082000000030000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000004800000085000000860000
+        0047000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000018000000180000
+        0000000000000000000000000000000000000000000000000000
+      }
+      OnClick = MnuPreferencesClick
+    end
+    object MnuExit: TMenuItem
+      Caption = 'Exit'
+      OnClick = MnuExitClick
+    end
+  end
+  object ImageListMenuTray: TImageList
+    Left = 832
+    Top = 416
+    Bitmap = {
+      4C7A190000001000000010000000A81800000000000078DAED5D095C1447D6EF
+      1893CDB1C92626598D1BD4300728680C28029A950046C103842531CAE915F146
+      51F10ADE4610054F180F446E4451C003C4FB448D265EA880BAD1355114040191
+      EB7DAF7A6AB0A7A767A667D04D76BF2D7E7FBBFAD5FB57BD7AF5AABBBAA76664
+      98179740610362A0957B6B1B40718A009229307F334DA30E967B3912E06218C0
+      B9D988590067675284009C9981980EF0E35CD40907F879995A1D2C3F7F2AC0E9
+      2900A597416B7A7411E04420628C26FFF87788D1000DB5BA717818C0A1A19AFC
+      43DF021C1C02505BA11BB90311FD35F939AE081780A70F7423FBEF882F34F959
+      3D11F6004F6EEB464657C4679AFC1D5D109D01CAAEEAC63629409A54939F2641
+      98023C3CAF1BC99F20FEA6C94F6EABC4955500F74F0AE3721440626BC45F35F9
+      442608D44F6AA36C33A51D40EAA7D80799700C121FECB406C8B4431FF706D8EB
+      AC1C97FDEE38B65FE3D87B031C1DAE7B0E18397FFE0829C04CEA1D20978CC7EC
+      2BC6F0FDE5D21404F8C965C7FC3B9ACA0C6E5F2E4D45FE113FB9340B8FB57E32
+      C96C2F8679D580F6D3481DCABA24DFE0F97DC4457F99ACAB18BE9F4CBA8DD4A1
+      3A1FDAB9DDFBFE72D91694D563BDCBBD3EF9E44D43F8AAE46B26F912E5B70948
+      5E57FF55F6F313691BFDB282F8D75F2689348A6F260B47FEAF68E7BA9761FF8B
+      F49F31E347E28F8D3DB9241BF3CF10B30C8C1F367E490C1A13BF7E329927B63D
+      CAD8F9F34748AFBC720E74411F971C6B6A1AA1BCBC011E3C68803B77EAA1A8A8
+      0EAE5CA985F3E76BB5D6A192CF9DFB1874E1E0C1A71A75A8CE43421E8318A4A7
+      57ABD541F24F9F3642707099286CDD5AA9C12F2B6B804993CA4461FDFA271AFC
+      7BF7EA61ECD85251080FAFD0E01717D7C1E8D1A5A2101A5AAEC1BF74A9160202
+      1E89C29429651AFCFCFC67E0EDFD4814468D2AD5E01F3C580343863C140DA118
+      484DAD024FCF877AA12B0657AF7E02CB9655A08F1EC3B46965306E5C29DB67D2
+      E6A04125A2E680B1F3E77F49990A0A0A400563F92D5BB614CDE7B7C7E573EB10
+      B24BA5AB82AA5CAC8CDF962A2F56F647E10BF55588AFAFFF5CBFF2FDAE4D4FCC
+      586BD3131B6BCD8DC97F4372449850381AC80D4690756304452A95896D5768CD
+      1985E824826F42DB343669E38BF58790FD86FA2398F6B739FEE8F492FDC13463
+      3C1721B621D228B65199187F30549F9FB6E9B183EBAB3481F23403FAD45CBE31
+      F637C77F2F32B544BC6E24B70D220131D908EE47889588F988D10672DF478423
+      DC10F310D60670DF412C4578D27AE20CE0BE45C7E56B7AEE8E0815C97D9DDA3A
+      9423EB4C7D10C1C324EA1F556A411E7D103E02F59A73AE632A6C45709F89493E
+      5E40CF5CA03E1FDA560BDE584D12B07325ED43D3233DEDA3D8780AA53E64A84F
+      17511F8B4D71740C3DE998BE6300D79ADAEA4663E97D036370348DDD95BCB112
+      9B26D3B9D3C6C8B9F73A9DBB46A5A50C382C62C08480E40DE12E6160E23206B6
+      FDC0400401C91399D876893E5F4E64DAECC0325B2CF3A21883C8E29CAB9045CB
+      D873C2E1F1B5F104EBE1F295176830217DD5D73FA24374352FF02F96AFD2D326
+      FF7FC09FC2E14F79D9FED716B786C4317FDEF021661E71E72D1F42ED82963FCF
+      9FFCD25B1F36FFEDA343F20703CF0FCD0446FCDF9FF67F5CC3E47E005CBCB6BF
+      75AD18EE0787A40F89BEEC78F71B2A59E793BD2E12D9DB792695FAF8DAF454F5
+      EAE2CE2E5CB488E8F4CC7739CE2FEB7F7E4836291B7775FA1A7DFCDE67071EE6
+      97B95DF0DEA98F4FCA884E8FD37D4EF3CBFA9CF3C825653E9702B7F2CBAC4F39
+      9EE3FB5B1F3A9EB0BDFA3FFE7F07DF2EBFEFC937F3FE566D083E3BF9F79FD8F9
+      A225393838B41C326488C9C081032D0C5D3B0C1E3CB89FBBBBFB123C860D1AE4
+      B1CCCDCD330CF3BDC470BDBCBCEC507705A28F4A360893BBFBE088FEFDFB5BEA
+      E37B78784C40683C2FB8BB7B7EEBE9E9395C043F1461A5C9777F4F64DF23DCDC
+      DC4C8C5D7719CB1F3CD863C7E0C19E69783C80C856E6B5C16307CF379EC43F62
+      DB22BA84C3B1D98BC0803EAAE9FFA7F39BEB3FF5F11303F5F17B590962993604
+      06F3E2192BD8C8CC874D4C180B92DFCC5889E26E667A2322218EB16B926D62EC
+      B08E485226823F1A75C76AC85146CA44F0E74332F3B9863C8EF99C94E9E56F62
+      2250CF44A05E1352F6B2F858B60375D21007309F4DF3CFA1941DA0F91D3CAE27
+      CA45C72FD1251C8E6FBD0844F379FAFFF1FC66FA8F377EFAC11BBFE6265F678B
+      76BEFD2CFC0CC1372E9612C21D68DD96BC8F69E1E76A11EBE7DA19C4C0D7C532
+      C5C18169E9EFD0E10D3F170B5F5F178BF1A2EB70B14CF6F2625E45DEE8267B5C
+      2C1BFDFA5904E9ABC3D7D52289707D5D3A4D201C159FDAD4E8EB6A394D5B1D68
+      63A2B25DCB60B63DD6160BDF1143A5419C7E352266F1EBF071B14C20FB48F038
+      BB894BF4FB597A4F9EF97102AF2DB4CB92BCF76A816D6E419BE209D7D7A5F382
+      E7FDB02C419DB0C9F33EEA3A3BE6CFE95AFC44DE95B5205C3F97CECBA86DC77C
+      5C3BFACC4B7B75D0E2BDCC76C4CD257B993C3F57CB0B4275F820CFDBC56201FA
+      764DE084B6CEA81BB2640F538C47A03884383F6956EB205FD7CEF55AC63A7CDE
+      4EA6D3E23D4C1987C702DBDF80F2D9880B019E1DD18F960DC27558AC5EBC8FE9
+      8F9C4635FE1E66C6BC0CE63DCC3FC47CEE77FE9F0E443F8DF7ED6F3116FB1FE8
+      EF6A39C6B75FE7EF42A2DEED87E577F9ED2FDAA79C8358E64B65F731BF607136
+      F3E5823DCCE70B773303B0BFAB11D53CBB4FE0B16EF1EEE7EF50F17C21DF3E01
+      90F28879F398160BF7320EE139CCDB6ACFFF7B19576CEBB4403DE4FCE8C23DE2
+      3E979BB58B698D363A2DDDCB782DDDC7F49B97CBB435F49A305C2EFF2C406A1A
+      E82F331D43F262797E72C9547FB9B498EE83E2A2989469E30D934ADFF53793E6
+      B0BA66B2303FB98CECE17B40E06726CD243265993487E8F2F9945BE4672EB1F6
+      939B3A29DB94B8D37D60E02F93F521654487E80AD80CA49CAD4BB9FF2BED7939
+      BB9F3083CD2BEB006E5FD8FEA27D1CFD3B01E6D2BEAAF300996C00EADC7C6E2B
+      DB9762959F497D3E66A6DDD8B20E1DDE23E7015269D3E757BE669F766175BA74
+      61E385E89273CA9DA2EC9F349DD88CC7C3748FDF76F65C890CB64EB9F420D549
+      A7633245807F889E6736F19579413EDF7E62A3CADF4DFD475F10D9E8B6ECBD42
+      CD7E21FF917D8201324930676C67A8FCC5F79FE0F899B1F65E21D7BED1D6D6AF
+      E1785E436CD7367EFCF821B6B33A32D9446287D256D35EDAE247387ED998A9C0
+      E3133FE27F3DF1DBDCF9F3A2E62FFB0CDEA9D3EBFEE6E61D7CE5721B7FB969F7
+      111D3F6D4F64BA3818E33DE85E4D21DB5528422830B6D59E05708EFA616CD560
+      1D73FCA5525B7FB9DCDCBF538736F31C1C5AE27C78C3BB63C78F7D64B28EBE52
+      A95D80996C11C6763DEA4DE6C44B01A25C975F9B7495F3AB1271BD492693E622
+      9EA2AC8CC4091E1723C6E2F8F7C76BCF209227B20099741719535657F63C06E8
+      BED30C8C1B7F946F0A30939EA4FB5DAB71BCABB0CE5B54B6117586A29F923126
+      E279FC3463D76F58573EB67B4AAC3EDAE0E16F26E9F7DC7F923358471DF675C4
+      7033339D9F919171617D803EE1DA8FE3F713B9EEA1BC81CE91C34D904B0FA8AE
+      6718C349A857C8DD57ABEA3F3BDEE43A8DF30EFBB392BD0E9BB1D79AA53E12C9
+      5F03CC248EECBC34932C0C3097D833749FAC58FF61BBABB9F188EDFC9D8E7F02
+      195B517303ED267B8AB1AEB3EAB1CF5E1F53719CDDC87CD13A4FE4D220B29FD9
+      DFDCB4B3DA1A9C5CE33176C8BE752D73671E8DF5321CBB305D73D74F2AB5F037
+      973A70E16B6EFE01DB3ECE3D7D73D99884F3720EE77EA3134457800B62F9ACAF
+      3975A8E4A2E39FA7CF3D27F70D1CCFEF9AC15FAC8C51E908A3F866D2E198FF05
+      E364A491EDFFE227938C36D6FEA678944B06ABCD15CEF54A0C9FF6C54B05EE35
+      5F2CBF39F6FF3BF9CD8DDFE6CE9FDF3BB163CCAE7194D77B722D25EB25515CE5
+      FD84AC376F70EE17649D5049EEF97ADF5DD03825F70E958CE4E9FDF657B5FBD0
+      F3FA33B0FC1F1CDB353E0821D74BB25611E4135B956BF48FB4F1756E0C61D7A4
+      5220B6E3FD70B98EF5924EE07D301CAF335FD375A59741A01C15DFE031FF2FE1
+      937509BD778FE4DF33B5815C5FD96702333333E5DC954429D78EA2C7AE8CAC6F
+      98FF9244D68CE4BB52649DA73E5724D14AFF48BD7973E806598B3DBFF64903A9
+      5F4EF0E6A9825DB79949877164C574BCCE3E1F4B5972805CA6F79DA8EA590EE7
+      DCCF6ACFF722D68F2A2E39F2F5F5F1B95C217D5D7C3EB7C99F72C9107D7CB28E
+      A1713E4367DFB47CEF8FAE45A608ACA397E033D802639F5F0CF5DFCBE693F821
+      CF1906DCEFD2C9730C2F7E2B04EF150220EF04084773FEC8F2F4F25107C76AA6
+      BEE7B47F7322EF179299E7FB9309B8DF318DE49525538E2A91F33C9E0EB9A67B
+      5000AF2C8F7254492557DFDAC43EAEB1E0DF1FF8FABF373F92EAF0E1402154C6
+      FF0EAF07A73D2FCA6BDACEC12BF310DAFAD00C7E73EDFF4F1FBFE6C66F73E7CF
+      4B4B1372E0BD717BC1D258FE98DDE038221B860CCD806E437680CEF70E4B8EC3
+      3B8B8E81DA3BBC802C88F0DE09FD066F83A1035240E7FE9DF947616CE81168DA
+      EBEFB3135EC776AFFF231DAC5D92A093633CDCEEBD1504F771CF3D0CAFCE3A04
+      BB67E44107950CEDEDEB990EE09A0CCE5FC643879E5BA0D17A234409F1430E40
+      D7A9FBE1EEE45C68DA27E4910E19C8AD754C80AFEDB7C07CAB8DF06BA768A893
+      AD058DFD0541B9B008FD7C3F708FD2476EA960DE3F05EA9C12A004DB3545EE75
+      E4D69AAE01681B09C7DAAC84169C317A75EC5EB83E3C0BAEAA642EC9A0C07601
+      B9B7D0E6B7907BD6742D72A3005A2D07787B198CE08C91F5882C80611970849C
+      F74D0273A778788A3603722F13D9A76BE0F0DF22A1FE83E590F6C652A8661642
+      15B3B081FD5CC9271396FC230360503AA49073F471BA552C80C506804EEB219F
+      C85AAD84DC77C300DE5A0AC9EF458009B61FCD4C2F5FEA9B09AF2FC8795C302B
+      E5064466171F5B975F1764170710B4ED1EF8273D840EEB60DFAE2BCF7A8E8DBF
+      79ABFD8AA7C0CC81BA5547CA175DB8727B4CC491CA2E017BC161F9F459B062A4
+      4FD5FAA9139FCE1F391A361FB95B1AEA39107E9830E9696C014446CF9E55BA60
+      90236C3EF62038FC749DF7E2110130C9F94BA87E706FDCD1C2AA6FA6B9B941FE
+      FEBC63C777EF3E1CE4EA0AE7F3721E4C193000968E1ED5901DB3B6747C1F6758
+      1A18580D009D73631567A2A64E6D983BCC1B2E9DCE5FF9CB954B4BC6393B43F8
+      8409B07AC68CEAA28B9714999B632FAC9D39B371F58C10081B370E22A74E85ED
+      D1D1A7EFDDBE1D35D2DE1EB68685C1347777389491B12743A12898EFEF4F7E5D
+      C611D10AD176F1A851B02F29E9DCA3FBF727DFBF733769BA87079CDA97F370C9
+      77DF41D28A95B7CFE4E5A5CDF3F585848888DF6E151444DD2AB8D6B42FA4BEBE
+      C1F4CA99B35BCA4A1EB2DF417956F3AC1BDA19FBE05FF7627E3A7E220ECBD9CF
+      69EE14152D2BBE7275B5502C871E0A6526E4473181A72336104C3CBB8A95E94B
+      5373C2991147971CEBBB7B728363D67870CC99A404E6FBED096A18716CE9E1A0
+      93C25B58861F58C0D8A60EAF72DC85BC53D3C1F1EA5C70BCF6BD12244F6458E6
+      913DBD6AFAE1B5EACFD399A18C69B45B65CB75BDC0FAD444703C3F4B186743C0
+      31631C786C0FAE0ACD8C69E2F74D187BE09DF05E10FFCFFD907BFF4798716513
+      6CBEBD0FF24BAFC1AE7B2761CF6F67E0FA933B70B9E2366CBAB5173AAC720597
+      A409FBD8F7ADA15ECCFBDFDB35F4C99808971F14C3F01F82A0B6A10EAAEB6AC0
+      75FC1078525B0559570E436FDF01E032EE1BF8A5E237B04B1D091F86DAD77BA5
+      7931DE5BA7E3043607B7DD33E050E11968F7998CFDA9A1F29A4AF63EF9B0FA31
+      FC55F209249ECA82D3FFBC08772BEE836DDA28209C61F1D319B7B581EB984039
+      B86D0F8643D7F2E12FAD5BC1DCD830981EBD50C9AF2A037B0F27E8FA951D645D
+      38C8D6DD3576183063E4E011337E65C2CE2426352B152AAA9E40C9C31268DFA1
+      3D9C3879020E1C3CC8F2EBEBEBA1A1A101F6E5EC8356AD5AC1D58202A8AEA986
+      E4CC1448C94C6312D21398B8D438282F2F87929212B0B5B565DB201CC2AFADAD
+      85D2D252686C6C84EFBFFF1EB2B3B3A1BABA1AB6A46E81246C3B343494512428
+      1EDE28BA018F1F3F8671385F547C070707A8ABAB830938B7F0519B3D92FA8A6E
+      1581225EF11BE192B43971F3B2948C14A8A9A961F52B2A2AD83648FED9B367EC
+      91B44F8EC496D8E458D89CB4B9E9F92534369459BB69EDE5C4F444B876FD1A14
+      17170BA2E05A01246C4B80759BD7FD1C1313A31683D1D1D14CD486A8CBEB63D7
+      43DEA13CB874F952D3F77D2F5EBA08FB0FEE273C58A558F5F3860D1B04E74068
+      5A2813A5885A1AB63AAC64F9DAE5B066E31A16248FB2FBC85D4474F425E29715
+      EB573091EB2399A898286665F44A46E5AB3F7ABAE96432B5D8E993345D287232
+      4929766AE7CCE71259B173BB107D6D14BA48FF84EDECD4903BB6F3BAE9D46EC3
+      EDBEED3FD6C52FEE63D2ADD8C9E40CC9177DD5D6A4D0C9847D462E72EA30A4D0
+      B1FD8A624793C422A7767EC5CEA67F51ABDFA95D276C7716B61186B61E50F151
+      16D1D43E82F0583ED643CE0B1D3A38143BB69B8C6DAE51F59BF8411B5FD5DED5
+      2FDA7FCCD683E5855F9A0C52F7957EBE4E1FBC04BE31E3C7E51B133FDCF13326
+      91B142FF46DF7436997393F65F1784EAB8EAF8717BB47BAEB1FCE6A40193FB32
+      BE217D98FA7DB60CECE9F90AECEBF9261EDBC0DE9EEE881CC47D4406C2A9717B
+      8F3716CE7766DC82FAB23C02F7297D994B098E0CECEFF567D863EF09BBED1311
+      17110F118D08A0B88C75F4FB3973C06B3EB35C98FE940FD9F6A4DD0FF1F80364
+      D997B1BF41278C3AD4D9806D48200FEDCCB2638E26B831B0BBD79B9069FF3DEC
+      B2AF41802E34ECB47D52BFD3361FB981585FAB865D760CCAAD60A7DD2F08D087
+      DAF41EF06C9B0D3466D8D6232F16D11A76D805C10EDB46043C4BB581B2782BA8
+      473D72CEC7D394EEA8D31D603B5BFE0CB963619BED5E0434A4F680C75BACA064
+      6357A8D86A0D44C645635A0FA88CB786FA141BA52C8D951F85941EFF8264AC93
+      05D69B8CE54427A5871AEA13BB43D516E42772CA927B9442628F5AD83F07E028
+      2ECE33BE0548C2BE121D0E1A13BA4339DAF514F9807948B05122D1A616E26DCA
+      212704E0D6B14638BF15EBED0F8D71DDA171AB12755BBA4185E273A8DE68C5CA
+      61ABCD73C4DB94409CCD6948E85D0327D61E85536B2E437CCFBA06E410FD8A98
+      AEF01851B3C90A20AE1BA23B0F36FB21B6FBF710DBAD02E21DE6C3CE91BD307F
+      0CD188003D409DEED36053371BD8D0AD1014DD36C1C66E12CC6FC47C3DC4A08E
+      027536743B85C8C2FC0356A682A2DB5DD4EF0E1BACDF8418EB39106DBD1F14D6
+      5D30BF18F3B5084034E0790295DDA432A55C611D011BADDFAE57583168C3FBA8
+      3301E106D1569360BD553502100D781E8F988FF9E2E732EB9DD876FBC60DD64C
+      62980B531FF33983F5BD86780762AC06A0FE0D04E13EC1F31F4061E587F9B388
+      4AB6BE182BF30685758B92D4C1FA2E0F7FA13034917793E4599DACB116D2BCD8
+      F7950311E4DEE887F83305C9C7D1326D89BC675A4EB67352907C0F4E39D99311
+      4CE5FCEF11C811B908AE43C873D2320479776ECA910FA6BA728E8C7C56BF11B1
+      49A0AFAE64898A20EF7BC7521DA23B427D5B098BB7387D1DC029279F551EA765
+      6F71F4F97C5522EF30C85EE6BD14D3A84CC7B616C1FDEF3329B889DC2B4D44F2
+      85E41102FC118CF0EFA370F95328F71C42C1A8FF4609190BB23FA6BB0EBEEA37
+      0D14342EF836F4A6B1114C63C510FBF9F11B47C7CA87C2CFC8F9934E41F2EF1A
+      310F8D9DBF2F2A39F3DE1BABE029824BF63A8668E193EF5AECD0132FFA3E0F4A
+      E3C4C59466F223FEC7FF5DF9CD19BFE6C6CF8B8CDF17397F7ECFB48BF779451A
+      95E94A1FD2EB5C04BDFFF3D3015A369CEA6ABC42A47E25F1B05BC067BB69D9B7
+      5497D1715DEF29C0EF2910AF86DC179866F0C9EFE6BC2610EF62F843E93A4CDF
+      EFE608F127D3CF9EE48CE66F0399E8E1137BAFD1CFAA2204602BA27D2B1A3B62
+      BE3BAAADFF62EBD0E57F2B11E33753605D29947AD3EB023FD9D3354C841E2CA0
+      BADAE690891E7CA8CB3800F80C118728425422AA10371189082B1DBC160805A2
+      8EBCBFADAAAE86F8C46D1011190DB97947D8F7AF98C83FF890086FF0B8AF2072
+      553FB3BF7D47366CDC9C0877EEFC8BE555573F85C78FCBB9BFC47F1CF1270E7F
+      85AA6065540C9C397B0162366E85733FFE0C3AD26ACA6D87784A049B6293E0C8
+      D1936CA1733F2F58BB7E333C795209D76F1481EFF0096065E30C9D3EFB029E54
+      56B2AFA81116882581E3A783E5E7BD61DE82F0A6CA1F3E2A6DCAEFCADC0712F3
+      1E2CBEF519C3B56101E228A9DBCCB2A71A879F4E9FF91142662F827FFE72972B
+      FE09716D2BFA794EE80F202695573CE1D65181B872FF7E091C3E72424DAFE05A
+      A106F74661319C3DF71324A56634FD8F0888BC94B49DAC9C9BC223D6C2E4A973
+      A1A4E451936CD69CC5E0F895271C3C74BCA95B3535CF428267CC875F7F7BA0C6
+      CF3B7094F557C72EBDC0DB7F1CF8048C07FF111359FF51FF9314BC72D5BAF7CE
+      9C3D5FC6B73529654793CF091E3D2A83A2E25B10179FA652A9457C426200636C
+      329FFF95EB376AFC68451C0C1CEC03858537552AD379311CAD2AC8CCCE51E372
+      917FF63C51D9827855600E910F3F2A878F0ED2C6AF090A9E3B5588CBA9A3F517
+      8E6E6324E6B639A87F13710B9127EDD8639CBC93BDC67BEDFF03455E49E1
+    }
+  end
+  object TimerGenSSL: TTimer
+    Enabled = False
+    OnTimer = TimerGenSSLTimer
+    Left = 400
+    Top = 320
+  end
+  object TimerNetStat: TTimer
+    Enabled = False
+    Interval = 60000
+    OnTimer = TimerNetStatTimer
+    Left = 312
+    Top = 256
+  end
+  object TimerStartPostgreSQL: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerStartPostgreSQLTimer
+    Left = 400
+    Top = 304
+  end
+  object TimerMonitorNginxPHPUpstream: TTimer
+    Enabled = False
+    Interval = 600000
+    OnTimer = TimerMonitorNginxPHPUpstreamTimer
+    Left = 144
+    Top = 280
+  end
+  object TimerLazyLong: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = TimerLazyLongTimer
+    Left = 528
+    Top = 432
+  end
+  object popSamples: TPopupMenu
+    Left = 344
+    Top = 192
+  end
+  object TimerLicenseKeyCheck: TTimer
+    Interval = 2000
+    OnTimer = TimerLicenseKeyCheckTimer
+    Left = 640
+    Top = 408
+  end
+  object TimerAutoBackup: TTimer
+    Interval = 60000
+    OnTimer = TimerAutoBackupTimer
+    Left = 736
+    Top = 32
+  end
+  object TimerValidateLicense: TTimer
+    Interval = 120000
+    OnTimer = TimerValidateLicenseTimer
+    Left = 648
+    Top = 328
+  end
+  object ImageListServices24x24: TImageList
+    Height = 24
+    Width = 24
+    Left = 16
+    Top = 168
+    Bitmap = {
+      4C7A020000001800000018000000910100000000000078DAED543B6E83401075
+      EB3EBB49913A7DCC8A4FE15BF8269414B8E1069C802B7087B486B49109920B5F
+      8003641ED866B1D80D1B6B2D2561A49116987933F366798BC56CFFCD8220587A
+      9ED8F8BE887C7F15936FD52E22C422670A7687E934E4399D13092B1E77C42016
+      3922D2F7BDCA10EBBAEE8BE9CCC8412E30347DE7B7727B9A3BBAE61BF3C97DAF
+      D7AFCCF39C108EB3E11C8DBC8F6E977DEFC0A3E73A08440AC7D9A406B08039E4
+      46247D3D27046E3F9F48F16E3A3E76DE73641BDF363FB6F76BFB7EDEE3FFD2E8
+      8342172EFA33591F14FAA6D1B6567F8CF46DB6D966FBDDF676785E9615DBECAA
+      C7A8FCE4F16ECFB74A470CC522670A761B5FF3A6A8585ED62C39E3A0CEA8534C
+      17CB1BE4EAB02926436CB17F30D667E49CEA64AABEF1FD566E81713D47CB3738
+      31E8FBE3F8C48A8A87709CE5398025EF03FB31E91D78C47DFD5EF3145ED07950
+      033C11E670A72C99CE010F817B7E6E6BD0BB7E8F742F248E6CE3FF849F42E2A7
+      FC861FDBFBB57D3FEFF17FA9F441A50B17DD30D087317DD3695B5BC750DF66FB
+      5BF6058224CB52
+    }
+  end
+  object TimerAutoUpdate: TTimer
+    Enabled = False
+    Interval = 120000
+    OnTimer = TimerAutoUpdateTimer
+    Left = 624
+    Top = 40
+  end
+  object TimerAutoUpdateCurlCacert: TTimer
+    Enabled = False
+    OnTimer = TimerAutoUpdateCurlCacertTimer
+    Left = 672
+    Top = 104
+  end
+  object TimerMinimized: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = TimerMinimizedTimer
+    Left = 888
+    Top = 50
+  end
+end

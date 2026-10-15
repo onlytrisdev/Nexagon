@@ -1,0 +1,72 @@
+name: Build & Release Nexagon (Win64)
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-win64:
+    name: Compile Lazarus LCL Win64 & Self-Check
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Lazarus & Free Pascal (x86_64-win64)
+        uses: gcarreno/setup-lazarus@v3
+        with:
+          lazarus-version: 'stable'
+
+      - name: Compile Nexagon (lazbuild)
+        shell: pwsh
+        run: |
+          lazbuild -B "lazarus\src\nexagon.lpi"
+          if (-not (Test-Path "lazarus\bin\nexagon.exe")) {
+            throw "Compilation failed: lazarus\bin\nexagon.exe was not generated."
+          }
+          Copy-Item "lazarus\bin\nexagon.exe" "nexagon.exe" -Force
+
+      - name: Run Automated Self-Check Suite
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath ".\nexagon.exe" -ArgumentList "--self-check" -Wait -NoNewWindow -PassThru
+          Write-Host "Self-check exit code: $($p.ExitCode)"
+          if (-not (Test-Path "self_check_report.txt")) {
+            throw "Self-check report was not generated."
+          }
+          Get-Content "self_check_report.txt"
+          Remove-Item "self_check_report.txt" -Force
+
+      - name: Package Release Archive
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "release\Nexagon-v8.6.1-win64" | Out-Null
+          Copy-Item "nexagon.exe" "release\Nexagon-v8.6.1-win64\nexagon.exe" -Force
+          Copy-Item "README.md" "release\Nexagon-v8.6.1-win64\README.md" -Force
+          Copy-Item "LICENSE" "release\Nexagon-v8.6.1-win64\LICENSE" -Force
+          Compress-Archive -Path "release\Nexagon-v8.6.1-win64\*" -DestinationPath "release\Nexagon-v8.6.1-win64.zip" -Force
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Nexagon-v8.6.1-win64
+          path: |
+            nexagon.exe
+            release/Nexagon-v8.6.1-win64.zip
+
+      - name: Publish GitHub Release (on Tag Push)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            nexagon.exe
+            release/Nexagon-v8.6.1-win64.zip
+          generate_release_notes: true
